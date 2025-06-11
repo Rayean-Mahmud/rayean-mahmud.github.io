@@ -9,6 +9,6 @@ If you find my work helpful — whether it's an app, a blog post, or a design �
 
 📱 **bKash Number:** `01859-334307`
 
-<img src="{{ site.baseurl }}/assets/images/bkash-qr.png" alt="bKash QR Code" style="max-width: 300px; margin-top: 10px;">
+<img src="{{ site.baseurl }}/assets/images/bkash-qr.jpeg" alt="bKash QR Code" style="max-width: 300px; margin-top: 10px;">
 
 🙏 Your support means a lot and helps me keep creating awesome things.
