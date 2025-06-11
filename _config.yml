@@ -1,65 +1,55 @@
-# Site
-name: 'Mundana'
-description: 'Mundana is a free Jekyll theme for awesome people like you, Medium like.'
+# Site Settings
+name: 'Rayean Mahmud Arnob'
+description: 'Cross-platform Mobile App Developer & Tech Storyteller. Passionate about Flutter, Python, Firebase, and AI.'
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/favicon.ico'
-baseurl: '/mundana-theme-jekyll'
-disqus: 'demowebsite'
-email: 'wowthemesnet@gmail.com'
-mailchimp-list: 'https://wowthemes.us11.list-manage.com/subscribe/post?u=8aeb20a530e124561927d3bd8&amp;id=8c3d2d214b'
+baseurl: ''  # Leave empty for user.github.io root sites
+url: 'https://rayean-mahmud.github.io'
+disqus: ''  # You can add Disqus shortname here if needed
+email: 'rayean.dev@gmail.com'
+mailchimp-list: ''  # Add your Mailchimp URL here if needed
 
 include: ["_pages"]
 permalink: /:title/
 
 # Plugins
-plugins: 
+plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-paginate
   - jekyll-seo-tag
-  
-authors:
-    sal:
-      name:           Sal
-      site:           https://www.wowthemes.net
-      avatar:         /assets/images/avatar1.jpg
-      bio:            "Hi, I am Sal, the author of Mundana, the theme you're currently previewing. I hope you like it!"
-      email:          wowthemesnet@gmail.com
-      twitter:        https://twitter.com/wowthemesnet
 
-    jane:
-      name:           Jane
-      site:           https://www.wowthemes.net
-      avatar:         /assets/images/avatar2.jpg
-      bio:            "Blogger, fashionista, love to explore new ideas and write on my morning coffee!"
-      email:          fakemail@gmail.com
-      twitter:        https://twitter.com/wowthemesnet
- 
+# Author Info
+authors:
+  rayean:
+    name: Rayean Mahmud Arnob
+    site: https://github.com/Rayean-Mahmud
+    avatar: /assets/images/avatar1.jpg  # Replace with your actual image path
+    bio: "Cross-platform Mobile Application developer with a passion for Flutter, Python, Firebase, UI/UX, Writing and building meaningful digital experiences."
+    email: rayean.dev@gmail.com
+    twitter: https://twitter.com/your_handle  # Replace or remove if not used
+    github: https://github.com/Rayean-Mahmud
+    linkedin: https://www.linkedin.com/in/rayean-mahmud-arnob-a78345173/
+
 # Defaults
 defaults:
-
-  # all posts
   - scope:
       path: "_posts"
     values:
       layout: post
-      author: sal
+      author: Rayean
       avatar: /assets/images/avatar1.jpg
-      
-  # all pages
   - scope:
       path: "_pages"
     values:
       layout: page
-      
-# Syntax
+
+# Markdown & Syntax Highlighting
 markdown: kramdown
 highlighter: rouge
 
-# Paginate
+# Pagination
 paginate: 10
 
-
-
-# Exclude metadata and development time dependencies (like Grunt plugins)
+# Exclude metadata and dev files
 exclude: [README.markdown, package.json, grunt.js, Gruntfile.js, Gruntfile.coffee, node_modules]
