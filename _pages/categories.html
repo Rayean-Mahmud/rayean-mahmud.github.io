@@ -3,12 +3,34 @@ title: "Categories"
 layout: default
 permalink: "/categories.html"
 ---
+
 <style>
-  /* Page setup */
-  body > header, .site-header {
-    display: none !important;
+  /* Fix header nav items to stay in one line */
+  .navbar-nav {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    gap: 1rem;
+    overflow-x: auto;
   }
 
+  .nav-item .nav-link {
+    white-space: nowrap !important;
+  }
+
+  .navbar {
+    padding: 0.5rem 1rem;
+  }
+
+  .navbar-nav::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  .navbar-nav::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 10px;
+  }
+
+  /* Container */
   .container {
     max-width: 960px;
     margin: 2rem auto;
@@ -123,7 +145,6 @@ permalink: "/categories.html"
     color: #0056b3;
   }
 
-  /* Mobile responsiveness */
   @media (max-width: 600px) {
     .categories-bar {
       gap: 0.5rem;
@@ -137,12 +158,14 @@ permalink: "/categories.html"
   }
 </style>
 
+<!-- Categories Sticky Bar -->
 <div class="categories-bar">
   {% for category in site.categories %}
     <a href="#{{ category[0] | downcase }}" class="category-link">{{ category[0] | capitalize }}</a>
   {% endfor %}
 </div>
 
+<!-- Blog Sections -->
 <div class="container">
   {% for category in site.categories %}
     <section id="{{ category[0] | downcase }}">
@@ -169,6 +192,7 @@ permalink: "/categories.html"
   {% endfor %}
 </div>
 
+<!-- Scripts -->
 <script>
   // Smooth scroll to section
   document.querySelectorAll('.category-link').forEach(link => {
