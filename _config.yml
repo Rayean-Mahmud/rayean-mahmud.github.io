@@ -36,7 +36,7 @@ defaults:
       path: "_posts"
     values:
       layout: post
-      author: Rayean
+      author: rayean
       avatar: /assets/images/avatar1.jpg
   - scope:
       path: "_pages"
