@@ -5,7 +5,6 @@ permalink: "/categories.html"
 ---
 
 <style>
-  /* Fix header nav items to stay in one line */
   .navbar-nav {
     display: flex !important;
     flex-wrap: nowrap !important;
@@ -30,14 +29,12 @@ permalink: "/categories.html"
     border-radius: 10px;
   }
 
-  /* Container */
   .container {
     max-width: 960px;
     margin: 2rem auto;
     padding: 0 1rem;
   }
 
-  /* Sticky horizontal categories bar */
   .categories-bar {
     position: sticky;
     top: 0;
@@ -87,7 +84,6 @@ permalink: "/categories.html"
     font-weight: 700;
   }
 
-  /* Section titles */
   .category-title {
     font-size: 1.5rem;
     font-weight: 700;
@@ -98,29 +94,26 @@ permalink: "/categories.html"
     text-transform: capitalize;
   }
 
-  /* Blog card styling */
   .post-card {
     margin-bottom: 2rem;
+    padding: 1rem;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    overflow: hidden;
     background-color: #fff;
     transition: box-shadow 0.3s ease;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
+    align-items: center;
   }
 
   .post-card:hover {
     box-shadow: 0 6px 16px rgba(0,0,0,0.12);
   }
 
-  .post-card img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    display: block;
-  }
-
   .post-content {
-    padding: 1.2rem 1.5rem;
+    flex: 1 1 65%;
   }
 
   .post-content h2 {
@@ -145,15 +138,26 @@ permalink: "/categories.html"
     color: #0056b3;
   }
 
-  @media (max-width: 600px) {
-    .categories-bar {
-      gap: 0.5rem;
-      padding: 0.5rem 0.75rem;
+  .post-image {
+    flex: 1 1 30%;
+  }
+
+  .post-image img {
+    width: 100%;
+    max-height: 120px;
+    object-fit: cover;
+    border-radius: 6px;
+  }
+
+  @media (max-width: 768px) {
+    .post-card {
+      flex-direction: column;
+      align-items: flex-start;
     }
 
-    .categories-bar a {
-      font-size: 0.9rem;
-      padding: 8px 12px;
+    .post-image {
+      width: 100%;
+      margin-top: 0.5rem;
     }
   }
 </style>
@@ -170,14 +174,10 @@ permalink: "/categories.html"
   {% for category in site.categories %}
     <section id="{{ category[0] | downcase }}">
       <h2 class="category-title">{{ category[0] | capitalize }}</h2>
-
       {% assign posts = category[1] %}
       {% for post in posts %}
         {% if post.title %}
           <div class="post-card">
-            {% if post.featured_image %}
-              <img src="{{ post.featured_image }}" alt="Featured image for {{ post.title }}">
-            {% endif %}
             <div class="post-content">
               <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
               {% if post.excerpt %}
@@ -185,6 +185,11 @@ permalink: "/categories.html"
               {% endif %}
               <a href="{{ post.url | relative_url }}" class="read-more">Read more &raquo;</a>
             </div>
+            {% if post.featured_image %}
+              <div class="post-image">
+                <img src="{{ post.featured_image }}" alt="Image for {{ post.title }}">
+              </div>
+            {% endif %}
           </div>
         {% endif %}
       {% endfor %}
@@ -192,9 +197,8 @@ permalink: "/categories.html"
   {% endfor %}
 </div>
 
-<!-- Scripts -->
+<!-- Smooth Scroll + Active Category Highlight -->
 <script>
-  // Smooth scroll to section
   document.querySelectorAll('.category-link').forEach(link => {
     link.addEventListener('click', function(e) {
       e.preventDefault();
@@ -207,7 +211,6 @@ permalink: "/categories.html"
     });
   });
 
-  // Highlight current category in sticky bar on scroll
   const links = document.querySelectorAll('.category-link');
   const sections = Array.from(links).map(link => document.getElementById(link.getAttribute('href').slice(1)));
 
@@ -215,7 +218,7 @@ permalink: "/categories.html"
     const scrollY = window.scrollY;
     let current = sections[0];
 
-    sections.forEach((section) => {
+    sections.forEach(section => {
       if (scrollY >= section.offsetTop - 200) {
         current = section;
       }
