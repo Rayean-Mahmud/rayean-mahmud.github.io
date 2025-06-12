@@ -5,171 +5,109 @@ permalink: "/categories.html"
 ---
 
 <style>
+  /* Container max width consistent with your original */
   .container {
     max-width: 960px;
-    margin: 2rem auto 3rem;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 2rem auto;
   }
 
-  h1.title {
-    font-weight: 700;
-    font-size: 2rem;
-    margin-bottom: 2rem;
-    text-transform: uppercase;
-    color: #222;
-    letter-spacing: 1.4px;
-  }
-
-  /* Categories horizontal nav */
-  .category-nav {
+  /* Horizontal categories bar */
+  .categories-bar {
     display: flex;
-    gap: 1.5rem;
+    gap: 1.2rem;
     overflow-x: auto;
-    border-bottom: 3px solid #ddd;
-    padding-bottom: 0.5rem;
+    padding: 0.5rem 0 1rem;
+    border-bottom: 2px solid #ddd;
     margin-bottom: 2rem;
     scrollbar-width: thin;
     scrollbar-color: #888 transparent;
   }
-  .category-nav::-webkit-scrollbar {
+  .categories-bar::-webkit-scrollbar {
     height: 6px;
   }
-  .category-nav::-webkit-scrollbar-thumb {
+  .categories-bar::-webkit-scrollbar-thumb {
     background-color: #888;
     border-radius: 3px;
   }
-  .category-nav::-webkit-scrollbar-track {
+  .categories-bar::-webkit-scrollbar-track {
     background: transparent;
   }
 
-  .category-item {
-    flex-shrink: 0;
-    cursor: pointer;
+  /* Each category link */
+  .categories-bar a {
+    text-decoration: none;
+    color: #444;
     font-weight: 600;
-    color: #666;
     padding: 6px 12px;
-    text-transform: capitalize;
     border-bottom: 3px solid transparent;
-    transition: color 0.25s, border-color 0.25s;
+    text-transform: capitalize;
+    transition: color 0.3s, border-bottom-color 0.3s;
+    white-space: nowrap;
     user-select: none;
   }
-  .category-item:hover {
+  .categories-bar a:hover,
+  .categories-bar a:focus {
     color: #007bff;
-  }
-  .category-item.active {
-    color: #007bff;
-    border-color: #007bff;
+    border-bottom-color: #007bff;
+    outline: none;
   }
 
-  /* Use the same grid and card styles as homepage */
-
-  /* Assuming your homepage cards container uses this class */
-  .posts-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(320px,1fr));
-    gap: 2rem;
+  /* Section titles styling (category headings) */
+  h4.spanborder {
+    position: relative;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    font-size: 1.3rem;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 0.3rem;
+    text-transform: capitalize;
   }
 
-  /* Cards hidden by default */
-  .post-card {
-    display: none;
-  }
-
-  /* Show visible cards */
-  .post-card.show {
-    display: block;
-  }
-
-  #noPostsMessage {
-    margin-top: 2rem;
-    font-size: 1.15rem;
-    color: #555;
-    font-style: italic;
-    text-align: center;
+  /* Smooth scroll behavior */
+  html {
+    scroll-behavior: smooth;
   }
 </style>
 
-<div class="container" role="main">
-  <h1 class="title">Categories</h1>
+<div class="container">
 
-  <nav class="category-nav" aria-label="Categories navigation">
+  <!-- Horizontal categories bar with links -->
+  <nav class="categories-bar" aria-label="Categories Navigation">
     {% for category in site.categories %}
-      <div class="category-item" data-category="{{ category[0] | downcase }}" tabindex="0" role="button" aria-pressed="false">
-        {{ category[0] }}
-      </div>
+      <a href="#{{ category[0] | downcase }}" tabindex="0">{{ category[0] }}</a>
     {% endfor %}
   </nav>
 
-  <!-- Posts grid same as homepage -->
-  <section class="posts-grid" aria-live="polite" aria-relevant="additions removals" id="postsContainer">
-    {% for category in site.categories %}
-      {% assign cat_slug = category[0] | downcase %}
-      {% assign pages_list = category[1] %}
-      {% for post in pages_list %}
-        <article class="post-card" data-category="{{ cat_slug }}" tabindex="0">
-          {% include main-loop-card.html %}
-        </article>
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+
+      <h1 class="font-weight-bold title h6 text-uppercase mb-4">Categories</h1>
+
+      {% for category in site.categories %}
+        <h4 class="font-weight-bold spanborder text-capitalize" id="{{ category[0] | downcase }}">
+          <span>{{ category[0] }}</span>
+        </h4>
+
+        {% assign pages_list = category[1] %}
+        {% for post in pages_list %}
+          {% if post.title != null %}
+            {% if group == null or group == post.group %}
+              {% include main-loop-card.html %}
+            {% endif %}
+          {% endif %}
+        {% endfor %}
+        {% assign pages_list = nil %}
+        {% assign group = nil %}
       {% endfor %}
-    {% endfor %}
-  </section>
 
-  <p id="noPostsMessage" style="display:none;">No posts found in this category.</p>
+    </div>
+
+    <div class="col-md-4">
+      {% include sidebar-featured.html %}
+    </div>
+  </div>
 </div>
-
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const categoryItems = document.querySelectorAll('.category-item');
-    const posts = document.querySelectorAll('.post-card');
-    const noPostsMessage = document.getElementById('noPostsMessage');
-
-    function clearActive() {
-      categoryItems.forEach(item => {
-        item.classList.remove('active');
-        item.setAttribute('aria-pressed', 'false');
-      });
-    }
-
-    function showPostsByCategory(category) {
-      let visibleCount = 0;
-      posts.forEach(post => {
-        if(post.dataset.category === category) {
-          post.classList.add('show');
-          visibleCount++;
-        } else {
-          post.classList.remove('show');
-        }
-      });
-      if(visibleCount === 0) {
-        noPostsMessage.style.display = 'block';
-      } else {
-        noPostsMessage.style.display = 'none';
-      }
-    }
-
-    categoryItems.forEach(item => {
-      item.addEventListener('click', () => {
-        clearActive();
-        item.classList.add('active');
-        item.setAttribute('aria-pressed', 'true');
-        showPostsByCategory(item.dataset.category);
-      });
-
-      item.addEventListener('keydown', e => {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          item.click();
-        }
-      });
-    });
-
-    // Show first category posts by default
-    if(categoryItems.length > 0) {
-      categoryItems[0].classList.add('active');
-      categoryItems[0].setAttribute('aria-pressed', 'true');
-      showPostsByCategory(categoryItems[0].dataset.category);
-    }
-  });
-</script>
 
 
 
