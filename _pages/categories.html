@@ -5,165 +5,142 @@ permalink: "/categories.html"
 ---
 
 <style>
-  /* Container styling */
+  /* Container */
   .container {
-    max-width: 900px;
+    max-width: 960px;
     margin: 2rem auto;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
 
-  /* Title */
+  /* Page title */
   h1.title {
     font-weight: 700;
-    font-size: 1.8rem;
-    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    margin-bottom: 2rem;
     text-transform: uppercase;
     color: #222;
-    letter-spacing: 1.2px;
+    letter-spacing: 1.4px;
   }
 
-  /* Dropdown container */
-  .dropdown {
-    position: relative;
-    display: inline-block;
+  /* Categories horizontal nav */
+  .category-nav {
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: auto;
+    border-bottom: 3px solid #ddd;
+    padding-bottom: 0.5rem;
     margin-bottom: 2rem;
+    scrollbar-width: thin;
+    scrollbar-color: #888 transparent;
+  }
+  .category-nav::-webkit-scrollbar {
+    height: 6px;
+  }
+  .category-nav::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 3px;
+  }
+  .category-nav::-webkit-scrollbar-track {
+    background: transparent;
   }
 
-  /* Dropdown button */
-  .dropdown-button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 0.6rem 1.2rem;
-    font-size: 1.1rem;
-    border-radius: 6px;
+  /* Category item */
+  .category-item {
+    flex-shrink: 0;
     cursor: pointer;
-    box-shadow: 0 4px 8px rgb(0 123 255 / 0.3);
-    transition: background-color 0.3s ease;
-  }
-  .dropdown-button:hover {
-    background-color: #0056b3;
-  }
-  .dropdown-button:after {
-    content: " ▼";
-    font-size: 0.8rem;
-  }
-
-  /* Dropdown content */
-  .dropdown-content {
-    position: absolute;
-    background-color: white;
-    border-radius: 6px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    margin-top: 6px;
-    min-width: 200px;
-    max-height: 250px;
-    overflow-y: auto;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(-10px);
-    transition: opacity 0.25s ease, transform 0.25s ease;
-    z-index: 1000;
-  }
-
-  /* Show dropdown on hover */
-  .dropdown:hover .dropdown-content {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-  }
-
-  /* Dropdown links */
-  .dropdown-content a {
-    display: block;
-    padding: 10px 16px;
-    color: #333;
-    text-decoration: none;
     font-weight: 600;
+    color: #666;
+    padding: 6px 12px;
     text-transform: capitalize;
-    border-bottom: 1px solid #eee;
-    transition: background-color 0.2s ease;
+    border-bottom: 3px solid transparent;
+    transition: color 0.25s, border-color 0.25s;
+    user-select: none;
   }
-  .dropdown-content a:last-child {
-    border-bottom: none;
-  }
-  .dropdown-content a:hover {
-    background-color: #f0f8ff;
+  .category-item:hover {
     color: #007bff;
+  }
+  .category-item.active {
+    color: #007bff;
+    border-color: #007bff;
   }
 
   /* Posts grid */
   #postsContainer {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.6rem;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    gap: 1.8rem;
   }
 
-  /* Individual post cards */
+  /* Post cards */
   .post-card {
     background: white;
-    border-radius: 10px;
-    box-shadow: 0 6px 12px rgb(0 0 0 / 0.1);
-    padding: 1rem 1.3rem;
+    border-radius: 12px;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+    padding: 1.2rem 1.5rem;
     display: none;
     flex-direction: column;
-    transition: box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
   .post-card.show {
     display: flex;
   }
   .post-card:hover {
-    box-shadow: 0 10px 18px rgb(0 0 0 / 0.15);
+    transform: translateY(-6px);
+    box-shadow: 0 14px 28px rgba(0,0,0,0.18);
   }
 
   /* No posts message */
   #noPostsMessage {
     margin-top: 2rem;
-    font-size: 1.1rem;
-    color: #666;
+    font-size: 1.15rem;
+    color: #555;
     font-style: italic;
     text-align: center;
   }
 </style>
 
-<div class="container">
+<div class="container" role="main">
   <h1 class="title">Categories</h1>
 
-  <div class="dropdown" aria-label="Category selection dropdown">
-    <button class="dropdown-button" id="dropdownButton" aria-haspopup="listbox" aria-expanded="false" aria-controls="categoryDropdown">
-      Select Category
-    </button>
-    <div class="dropdown-content" id="categoryDropdown" role="listbox" tabindex="-1">
-      {% for category in site.categories %}
-      <a href="#" data-category="{{ category[0] | downcase }}" role="option" tabindex="0">{{ category[0] }}</a>
-      {% endfor %}
-    </div>
-  </div>
+  <!-- Horizontal category nav -->
+  <nav class="category-nav" aria-label="Categories navigation">
+    {% for category in site.categories %}
+      <div class="category-item" data-category="{{ category[0] | downcase }}" tabindex="0" role="button" aria-pressed="false">
+        {{ category[0] }}
+      </div>
+    {% endfor %}
+  </nav>
 
-  <div id="postsContainer" aria-live="polite" aria-relevant="additions removals">
+  <!-- Posts container -->
+  <section id="postsContainer" aria-live="polite" aria-relevant="additions removals">
     {% for category in site.categories %}
       {% assign cat_slug = category[0] | downcase %}
       {% assign pages_list = category[1] %}
       {% for post in pages_list %}
-        <div class="post-card" data-category="{{ cat_slug }}" tabindex="0">
+        <article class="post-card" data-category="{{ cat_slug }}" tabindex="0">
           {% include main-loop-card.html %}
-        </div>
+        </article>
       {% endfor %}
     {% endfor %}
-  </div>
+  </section>
 
-  <div id="noPostsMessage" style="display:none;">No posts found for this category.</div>
+  <p id="noPostsMessage" style="display:none;">No posts found in this category.</p>
 </div>
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {
-    const dropdownButton = document.getElementById('dropdownButton');
-    const dropdownContent = document.getElementById('categoryDropdown');
-    const dropdownLinks = dropdownContent.querySelectorAll('a');
+    const categoryItems = document.querySelectorAll('.category-item');
     const posts = document.querySelectorAll('.post-card');
     const noPostsMessage = document.getElementById('noPostsMessage');
 
-    function showCategoryPosts(category) {
+    function clearActive() {
+      categoryItems.forEach(item => {
+        item.classList.remove('active');
+        item.setAttribute('aria-pressed', 'false');
+      });
+    }
+
+    function showPostsByCategory(category) {
       let visibleCount = 0;
       posts.forEach(post => {
         if(post.dataset.category === category) {
@@ -173,7 +150,6 @@ permalink: "/categories.html"
           post.classList.remove('show');
         }
       });
-
       if(visibleCount === 0) {
         noPostsMessage.style.display = 'block';
       } else {
@@ -181,30 +157,28 @@ permalink: "/categories.html"
       }
     }
 
-    dropdownLinks.forEach(link => {
-      link.addEventListener('click', (e) => {
-        e.preventDefault();
-        const category = link.getAttribute('data-category');
-        dropdownButton.textContent = link.textContent;
-        dropdownButton.setAttribute('aria-expanded', 'false');
-        showCategoryPosts(category);
+    categoryItems.forEach(item => {
+      item.addEventListener('click', () => {
+        clearActive();
+        item.classList.add('active');
+        item.setAttribute('aria-pressed', 'true');
+        showPostsByCategory(item.dataset.category);
       });
 
-      // Accessibility: allow keyboard selection too
-      link.addEventListener('keydown', (e) => {
-        if (e.key === "Enter" || e.key === " ") {
+      // keyboard accessibility
+      item.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') {
           e.preventDefault();
-          link.click();
-          dropdownButton.focus();
+          item.click();
         }
       });
     });
 
-    // Show first category posts by default
-    if(dropdownLinks.length > 0) {
-      const firstCategory = dropdownLinks[0].getAttribute('data-category');
-      dropdownButton.textContent = dropdownLinks[0].textContent;
-      showCategoryPosts(firstCategory);
+    // Default: select and show first category posts
+    if(categoryItems.length > 0) {
+      categoryItems[0].classList.add('active');
+      categoryItems[0].setAttribute('aria-pressed', 'true');
+      showPostsByCategory(categoryItems[0].dataset.category);
     }
   });
 </script>
