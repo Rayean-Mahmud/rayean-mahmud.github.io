@@ -1,7 +1,8 @@
 ---
 layout: post
 title:  "Welcome to Jekyll!"
-categories: [ Jekyll ]
+author: rayean
+categories: [ Tech ]
 image: assets/images/demo1.jpg
 comments: true
 
