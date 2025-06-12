@@ -5,6 +5,7 @@ permalink: "/categories.html"
 ---
 
 <style>
+  /* Dropdown styling */
   .dropdown {
     position: relative;
     display: inline-block;
@@ -13,33 +14,32 @@ permalink: "/categories.html"
   .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #fff;
+    background: white;
+    border: 1px solid #ccc;
     min-width: 180px;
     box-shadow: 0 8px 16px rgba(0,0,0,0.2);
     z-index: 1000;
-    border: 1px solid #ccc;
     max-height: 300px;
     overflow-y: auto;
-  }
-  .dropdown-content a {
-    color: #333;
-    padding: 10px 16px;
-    text-decoration: none;
-    display: block;
-    text-transform: capitalize;
-  }
-  .dropdown-content a:hover {
-    background-color: #f0f0f0;
   }
   .dropdown:hover .dropdown-content {
     display: block;
   }
+  .dropdown-content a {
+    display: block;
+    padding: 10px 16px;
+    text-decoration: none;
+    color: #333;
+    text-transform: capitalize;
+  }
+  .dropdown-content a:hover {
+    background-color: #eee;
+  }
 
-  /* Hide all posts initially */
+  /* Posts */
   .post-card {
     display: none;
   }
-  /* Show filtered posts */
   .post-card.show {
     display: block;
   }
@@ -64,10 +64,10 @@ permalink: "/categories.html"
       <!-- Posts container -->
       <div id="postsContainer">
         {% for category in site.categories %}
-          {% assign category_slug = category[0] | downcase %}
+          {% assign cat_slug = category[0] | downcase %}
           {% assign pages_list = category[1] %}
           {% for post in pages_list %}
-            <div class="post-card" data-category="{{ category_slug }}">
+            <div class="post-card" data-category="{{ cat_slug }}">
               {% include main-loop-card.html %}
             </div>
           {% endfor %}
@@ -83,38 +83,40 @@ permalink: "/categories.html"
 </div>
 
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const dropdownLinks = document.querySelectorAll("#categoryDropdown a");
-    const posts = document.querySelectorAll(".post-card");
-    const dropdownButton = document.getElementById("dropdownButton");
+  document.addEventListener('DOMContentLoaded', () => {
+    const dropdownLinks = document.querySelectorAll('#categoryDropdown a');
+    const posts = document.querySelectorAll('.post-card');
+    const dropdownButton = document.getElementById('dropdownButton');
 
     function showCategoryPosts(category) {
       posts.forEach(post => {
-        if (post.dataset.category === category) {
-          post.classList.add("show");
+        if(post.dataset.category === category) {
+          post.classList.add('show');
         } else {
-          post.classList.remove("show");
+          post.classList.remove('show');
         }
       });
     }
 
     dropdownLinks.forEach(link => {
-      link.addEventListener("click", function (e) {
+      link.addEventListener('click', e => {
         e.preventDefault();
-        const category = this.getAttribute("data-category");
-        dropdownButton.textContent = this.textContent;
+        const category = link.getAttribute('data-category');
+        dropdownButton.textContent = link.textContent;
         showCategoryPosts(category);
       });
     });
 
-    // Show first category posts on load automatically
+    // Show all posts initially or posts of first category by default
     if (dropdownLinks.length > 0) {
-      const firstCategory = dropdownLinks[0].getAttribute("data-category");
+      const firstCategory = dropdownLinks[0].getAttribute('data-category');
       dropdownButton.textContent = dropdownLinks[0].textContent;
       showCategoryPosts(firstCategory);
     }
   });
 </script>
+
+
 
 
 
