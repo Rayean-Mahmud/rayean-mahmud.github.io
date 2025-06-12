@@ -4,16 +4,76 @@ layout: default
 permalink: "/categories.html"
 ---
 
+<style>
+  /* Simple dropdown styling */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 1rem;
+  }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+    border: 1px solid #ccc;
+    max-height: 300px;
+    overflow-y: auto;
+  }
+  .dropdown-content a {
+    color: black;
+    padding: 8px 12px;
+    text-decoration: none;
+    display: block;
+    text-transform: capitalize;
+  }
+  .dropdown-content a:hover {
+    background-color: #f1f1f1;
+  }
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  /* Hide all posts initially */
+  .post-card {
+    display: none;
+  }
+  /* Show selected category posts */
+  .post-card.show {
+    display: block;
+  }
+</style>
+
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-md-8">
+
       <h1 class="font-weight-bold title h6 text-uppercase mb-4">Categories</h1>
 
-      {% for category in site.categories %}
-        <h4 class="font-weight-bold spanborder text-capitalize" id="{{ category[0] | downcase }}">
-          <a href="{{ site.baseurl }}/categories/{{ category[0] | downcase }}/">{{ category[0] }}</a>
-        </h4>
-      {% endfor %}
+      <!-- Dropdown -->
+      <div class="dropdown">
+        <button class="btn btn-primary">Select Category</button>
+        <div class="dropdown-content" id="categoryDropdown">
+          {% for category in site.categories %}
+          <a href="#" data-category="{{ category[0] | downcase }}">{{ category[0] }}</a>
+          {% endfor %}
+        </div>
+      </div>
+
+      <!-- Posts container -->
+      <div id="postsContainer">
+        {% for category in site.categories %}
+          {% assign category_slug = category[0] | downcase %}
+          {% assign pages_list = category[1] %}
+          {% for post in pages_list %}
+            <div class="post-card" data-category="{{ category_slug }}">
+              {% include main-loop-card.html %}
+            </div>
+          {% endfor %}
+        {% endfor %}
+      </div>
+
     </div>
 
     <div class="col-md-4">
@@ -21,3 +81,38 @@ permalink: "/categories.html"
     </div>
   </div>
 </div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const dropdownLinks = document.querySelectorAll("#categoryDropdown a");
+    const posts = document.querySelectorAll(".post-card");
+    const dropdownButton = document.querySelector(".dropdown > button");
+
+    function showCategoryPosts(category) {
+      posts.forEach(post => {
+        if (post.dataset.category === category) {
+          post.classList.add("show");
+        } else {
+          post.classList.remove("show");
+        }
+      });
+    }
+
+    dropdownLinks.forEach(link => {
+      link.addEventListener("click", function (e) {
+        e.preventDefault();
+        const category = this.getAttribute("data-category");
+        dropdownButton.textContent = this.textContent;
+        showCategoryPosts(category);
+      });
+    });
+
+    // Optionally, show posts of first category on load
+    if (dropdownLinks.length > 0) {
+      const firstCategory = dropdownLinks[0].getAttribute("data-category");
+      dropdownButton.textContent = dropdownLinks[0].textContent;
+      showCategoryPosts(firstCategory);
+    }
+  });
+</script>
+
