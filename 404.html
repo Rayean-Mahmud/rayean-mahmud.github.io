@@ -1,24 +1,108 @@
+
 ---
 layout: default
+permalink: /404.html
 ---
 
-<style type="text/css" media="screen">
-  .container {
-    margin: 10px auto;
-    max-width: 600px;
+<style>
+  .error-container {
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
+    padding: 2rem;
+    color: #2c3e50;
   }
-  h1 {
-    margin: 30px 0;
-    font-size: 4em;
-    line-height: 1;
-    letter-spacing: -1px;
+
+  .error-code {
+    font-size: 7rem;
+    font-weight: 900;
+    color: #ff6b6b;
+    margin-bottom: 0.2em;
+  }
+
+  .error-message {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  .error-subtext {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 2rem;
+  }
+
+  .error-img {
+    width: 280px;
+    max-width: 90%;
+    margin-bottom: 2rem;
+    animation: float 4s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+
+  .home-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-bottom: 3rem;
+    transition: 0.3s ease;
+  }
+
+  .home-btn:hover {
+    background-color: #0056b3;
+  }
+
+  .about-me-box {
+    max-width: 600px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    text-align: left;
+  }
+
+  .about-me-box h3 {
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+
+  .about-me-box p {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.6;
+  }
+
+  .about-me-box a {
+    color: #007bff;
+    text-decoration: underline;
   }
 </style>
 
-<div class="container">
-  <h1>404</h1>
+<div class="error-container">
+  <div class="error-code">404</div>
+  <div class="error-message">Oops! Page not found.</div>
+  <img src="https://illustrations.popsy.co/gray/astronaut.svg" alt="Lost in space" class="error-img">
+  <div class="error-subtext">Looks like this page doesn't exist. But you're not lost — you're discovering!</div>
+  <a href="{{ site.baseurl }}/" class="home-btn">🏠 Return to Home</a>
 
-  <p><strong>Page not found :(</strong></p>
-  <p>The requested page could not be found.</p>
+  <div class="about-me-box">
+    <h3>👋 I'm Rayean Mahmud Arnob</h3>
+    <p>
+      A cross-platform Mobile App Developer focused on crafting seamless digital experiences with
+      <strong>Flutter</strong>, <strong>Firebase</strong>, and clean <strong>UI/UX</strong> design.
+      I also enjoy writing insightful tech content that bridges creativity and functionality.
+    </p>
+    <p>While you're here, why not <a href="{{ site.baseurl }}/about-me.html">learn more about me</a> or <a href="{{ site.baseurl }}/categories.html">explore some blog posts</a>?</p>
+  </div>
 </div>
+
