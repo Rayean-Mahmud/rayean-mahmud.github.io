@@ -5,41 +5,41 @@ permalink: "/categories.html"
 ---
 
 <style>
-  /* Simple dropdown styling */
   .dropdown {
     position: relative;
     display: inline-block;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
   }
   .dropdown-content {
     display: none;
     position: absolute;
     background-color: #fff;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-    z-index: 1;
+    min-width: 180px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 1000;
     border: 1px solid #ccc;
     max-height: 300px;
     overflow-y: auto;
   }
   .dropdown-content a {
-    color: black;
-    padding: 8px 12px;
+    color: #333;
+    padding: 10px 16px;
     text-decoration: none;
     display: block;
     text-transform: capitalize;
   }
   .dropdown-content a:hover {
-    background-color: #f1f1f1;
+    background-color: #f0f0f0;
   }
   .dropdown:hover .dropdown-content {
     display: block;
   }
+
   /* Hide all posts initially */
   .post-card {
     display: none;
   }
-  /* Show selected category posts */
+  /* Show filtered posts */
   .post-card.show {
     display: block;
   }
@@ -53,7 +53,7 @@ permalink: "/categories.html"
 
       <!-- Dropdown -->
       <div class="dropdown">
-        <button class="btn btn-primary">Select Category</button>
+        <button type="button" class="btn btn-primary" id="dropdownButton">Select Category</button>
         <div class="dropdown-content" id="categoryDropdown">
           {% for category in site.categories %}
           <a href="#" data-category="{{ category[0] | downcase }}">{{ category[0] }}</a>
@@ -86,7 +86,7 @@ permalink: "/categories.html"
   document.addEventListener("DOMContentLoaded", function () {
     const dropdownLinks = document.querySelectorAll("#categoryDropdown a");
     const posts = document.querySelectorAll(".post-card");
-    const dropdownButton = document.querySelector(".dropdown > button");
+    const dropdownButton = document.getElementById("dropdownButton");
 
     function showCategoryPosts(category) {
       posts.forEach(post => {
@@ -107,7 +107,7 @@ permalink: "/categories.html"
       });
     });
 
-    // Optionally, show posts of first category on load
+    // Show first category posts on load automatically
     if (dropdownLinks.length > 0) {
       const firstCategory = dropdownLinks[0].getAttribute("data-category");
       dropdownButton.textContent = dropdownLinks[0].textContent;
@@ -115,4 +115,6 @@ permalink: "/categories.html"
     }
   });
 </script>
+
+
 
