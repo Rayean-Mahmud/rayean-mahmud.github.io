@@ -6,8 +6,7 @@ favicon: 'assets/images/favicon.ico'
 baseurl: ''  # Leave empty for user.github.io root sites
 url: 'https://rayean-mahmud.github.io'
 disqus: https-rayean-mahmud-github-io  # You can add Disqus shortname here if needed
-email: 'rayean.dev@gmail.com'
-mailchimp-list: ''  # Add your Mailchimp URL here if needed
+email: 'rayean.dev@gmail.com' 
 
 include: ["_pages"]
 permalink: /:title/
