@@ -3,7 +3,6 @@ title: "Categories"
 layout: default
 permalink: "/categories.html"
 ---
-
 <style>
   /* Container max width consistent with your original */
   .container {
@@ -68,6 +67,15 @@ permalink: "/categories.html"
   html {
     scroll-behavior: smooth;
   }
+
+  /* Blog cards vertical spacing */
+  {% comment %} 
+  Make sure your main-loop-card.html uses a block-level container,
+  so cards stack vertically with spacing.
+  {% endcomment %}
+  .main-loop-card {
+    margin-bottom: 2rem;
+  }
 </style>
 
 <div class="container">
@@ -93,7 +101,9 @@ permalink: "/categories.html"
         {% for post in pages_list %}
           {% if post.title != null %}
             {% if group == null or group == post.group %}
-              {% include main-loop-card.html %}
+              <div class="main-loop-card">
+                {% include main-loop-card.html %}
+              </div>
             {% endif %}
           {% endif %}
         {% endfor %}
@@ -108,6 +118,7 @@ permalink: "/categories.html"
     </div>
   </div>
 </div>
+
 
 
 
