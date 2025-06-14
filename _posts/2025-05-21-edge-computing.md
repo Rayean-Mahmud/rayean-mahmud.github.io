@@ -6,7 +6,7 @@ categories: [Tech]
 image: https://kiodatacenters.com/hubfs/Imported_Blog_Media/121689454_s-2.jpg
 tags: [edge computing, IoT, cloud computing, technology]
 description: "Discover what edge computing is, its benefits, and why it matters in today's tech-driven world."
----
+
 ---
 
 In a world driven by instant data, waiting for distant servers is no longer fast enough. 
