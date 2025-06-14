@@ -19,13 +19,17 @@
     </small>
   </div>
 
-  {% assign card_image = post.featured_image | default: post.image %}
-  {% if card_image %}
-    <div class="col-md-3 pr-0 text-right">
-      <a href="{{ site.baseurl }}{{ post.url }}">
-        <img class="w-100 rounded" src="{{ site.baseurl }}{{ card_image }}" alt="{{ post.title }}" style="object-fit: cover; max-height: 150px;">
-      </a>
-    </div>
+  {% if post.image %}
+  <div class="col-md-3 pr-0 text-right">
+    <a href="{{ site.baseurl }}{{ post.url }}">
+      <img 
+        class="w-100 rounded" 
+        src="{{ post.image | prepend: site.baseurl }}" 
+        alt="{{ post.title }}" 
+        style="object-fit: cover; max-height: 150px;"
+      >
+    </a>
+  </div>
   {% endif %}
 </div>
 
