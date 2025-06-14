@@ -7,10 +7,10 @@
       {{ post.excerpt | strip_html | strip_newlines | truncate: 186 }}
     </p>
     <small class="d-block text-muted">
-      In <span class="catlist">
+      In
+      <span class="catlist">
         {% for category in post.categories %}
-          <a class="text-capitalize text-muted smoothscroll" href="{{ site.baseurl }}/categories.html#{{ category | downcase }}">{{ category }}</a>
-          <span class="sep">{% unless forloop.last %}, {% endunless %}</span>
+          <a class="text-capitalize text-muted smoothscroll" href="{{ site.baseurl }}/categories.html#{{ category | downcase }}">{{ category }}</a><span class="sep">, </span>
         {% endfor %}
       </span>
     </small>
@@ -19,17 +19,13 @@
     </small>
   </div>
 
-  {% if post.image %}
-  <div class="col-md-3 pr-0 text-right d-none d-md-block">
-    <a href="{{ site.baseurl }}{{ post.url }}">
-      <img
-        class="w-100 rounded shadow-sm"
-        src="{{ post.image | prepend: site.baseurl }}"
-        alt="{{ post.title }}"
-        loading="lazy"
-        style="max-height: 140px; object-fit: cover;"
-      >
-    </a>
-  </div>
+  {% assign card_image = post.featured_image | default: post.image %}
+  {% if card_image %}
+    <div class="col-md-3 pr-0 text-right">
+      <a href="{{ site.baseurl }}{{ post.url }}">
+        <img class="w-100 rounded" src="{{ site.baseurl }}{{ card_image }}" alt="{{ post.title }}" style="object-fit: cover; max-height: 150px;">
+      </a>
+    </div>
   {% endif %}
 </div>
+
