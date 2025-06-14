@@ -1,11 +1,9 @@
 ---
-title: "7 Ways to Speed Up Your Python Code"
 layout: post
-categories: [Tech, Programming]
-tags: [python, performance, optimization, speed, tips]
+title: "7 Ways to Speed Up Your Python Code"
 author: rayean
+categories: [Tech, Programming]
 image: /assets/images/python.jpg
-comments: true
 ---
 
 🚀 Writing efficient Python code is essential for developers working on performance-sensitive tasks like data processing, web applications, or machine learning. In this post, you'll explore **7 proven techniques** to boost Python performance — with examples, explanations, and quick wins you can implement right away.
