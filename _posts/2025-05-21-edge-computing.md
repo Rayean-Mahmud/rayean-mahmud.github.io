@@ -14,7 +14,8 @@ Edge computing is a modern approach where data is **processed closer to its sour
 
 Instead of depending solely on centralized data centers, **edge devices** like sensors, gateways, or local servers handle tasks locally — leading to **faster, smarter, and more secure systems**.
 
-![Edge Computing Diagram](https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Edge_Computing_Architecture_Diagram.png/800px-Edge_Computing_Architecture_Diagram.png)
+![Edge Computing Diagram](https://www.fsp-group.com/upload/230221-63F436389ECE4.png)
+
 
 ---
 
