@@ -1,11 +1,10 @@
 ---
 title: "7 Ways to Speed Up Your Python Code"
 layout: post
-date: 2025-05-20 15:30:00 +0600
 categories: [Tech, Programming]
 tags: [python, performance, optimization, speed, tips]
 author: rayean
-image: /assets/images/python-speed-cover.png
+image: /assets/images/python.jpg
 comments: true
 ---
 
