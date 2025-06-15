@@ -135,15 +135,6 @@ Companies ignoring mental wellness risk losing top talent and stalling team grow
 
 ---
 
-## 📚 Resources
-
-- [Mental Health in Tech Report — Blind](https://www.teamblind.com/blog/mental-health-in-tech)
-- [Tech Wellness Hub](https://techwellness.co/)
-- [Headspace — Mindfulness App](https://www.headspace.com/)
-- [NAMI — National Alliance on Mental Illness](https://www.nami.org/)
-
----
-
 ## Conclusion
 
 Technology shapes the future — but the people behind it need **mental health care to sustain innovation and growth**.
