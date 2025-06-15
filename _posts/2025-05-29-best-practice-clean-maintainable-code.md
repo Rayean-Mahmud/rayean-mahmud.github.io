@@ -27,16 +27,18 @@ It doesn’t just work — it communicates **intention** clearly.
 
 ---
 
+
 ## ✨ Why Clean Code Matters
 
-| 🚫 Messy Code              | ✅ Clean Code                      |
-|---------------------------|------------------------------------|
-| Hard to debug              | Easy to trace and fix              |
-| Risky to change            | Safe to extend or refactor         |
-| Difficult to onboard new devs | Smooth knowledge transfer       |
-| Slow development over time | Sustainable growth and scalability |
+| 🚫 Messy Code                 | ✅ Clean Code                           |
+|:-----------------------------|:-------------------------------------:|
+| Hard to debug                 | Easy to trace and fix                  |
+| Risky to change               | Safe to extend or refactor             |
+| Difficult to onboard new devs | Smooth knowledge transfer              |
+| Slow development over time    | Sustainable growth and scalability     |
 
 > Clean code is an investment that pays long-term dividends.
+
 
 ---
 
