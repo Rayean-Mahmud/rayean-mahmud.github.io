@@ -53,12 +53,38 @@ In school, we’re taught to memorize formulas and ace tests — but **not** how
 
 Let’s break down how high EQ plays out in real life:
 
-| Area | With Low EQ | With High EQ |
-|------|-------------|--------------|
-| **Workplace** | Miscommunication, conflict, stress | Collaboration, trust, resilience |
-| **Leadership** | Command & control | Inspire & empower |
-| **Personal Growth** | Stuck in patterns | Self-aware, adaptable |
-| **Mental Health** | Bottled-up emotions | Emotional balance |
+<table style="border-collapse: collapse; width: 100%; margin: 1em 0;">
+  <thead>
+    <tr>
+      <th style="border: 1px solid #ddd; padding: 10px; background-color: #f4f4f4; text-align: left;">Area</th>
+      <th style="border: 1px solid #ddd; padding: 10px; background-color: #f4f4f4; text-align: left;">With Low EQ</th>
+      <th style="border: 1px solid #ddd; padding: 10px; background-color: #f4f4f4; text-align: left;">With High EQ</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border: 1px solid #ddd; padding: 10px;">Workplace</td>
+      <td style="border: 1px solid #ddd; padding: 10px;">Miscommunication, conflict, stress</td>
+      <td style="border: 1px solid #ddd; padding: 10px;">Collaboration, trust, resilience</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ddd; padding: 10px;">Leadership</td>
+      <td style="border: 1px solid #ddd; padding: 10px;">Command & control</td>
+      <td style="border: 1px solid #ddd; padding: 10px;">Inspire & empower</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ddd; padding: 10px;">Personal Growth</td>
+      <td style="border: 1px solid #ddd; padding: 10px;">Stuck in patterns</td>
+      <td style="border: 1px solid #ddd; padding: 10px;">Self-aware, adaptable</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ddd; padding: 10px;">Mental Health</td>
+      <td style="border: 1px solid #ddd; padding: 10px;">Bottled-up emotions</td>
+      <td style="border: 1px solid #ddd; padding: 10px;">Emotional balance</td>
+    </tr>
+  </tbody>
+</table>
+
 
 > _Studies show people with high EQs perform better, earn more, and enjoy stronger relationships._
 
