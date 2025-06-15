@@ -1,12 +1,13 @@
 
 ---
-
+---
 layout: post
 title: "10 Essential Git Commands Every Developer Must Know"
 author: rayean
 categories: [Tech, Programming]
-image: https://static1.howtogeekimages.com/wordpress/wp-content/uploads/2024/09/a-terminal-with-the-git-logo-and-some-code-in-the-background.jpg?q=49&fit=crop&w=1100&h=618&dpr=2
+image: https://filecr.com/_next/image/?url=https%3A%2F%2Fmedia.imgcdn.org%2Frepo%2F2024%2F05%2Fgit-for-windows%2F6646f2f2484fa-git-for-windows-screenshot1.webp&w=1920&q=75
 tags: [git, version control, programming, developer tools, collaboration]
+---
 
 ---
 
