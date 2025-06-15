@@ -1,14 +1,12 @@
-
 ---
-
 layout: post
 title: "10 Essential Git Commands Every Developer Must Know"
 author: rayean
 categories: [Tech, Programming]
-image: https://filecr.com/_next/image/?url=https%3A%2F%2Fmedia.imgcdn.org%2Frepo%2F2024%2F05%2Fgit-for-windows%2F6646f2f2484fa-git-for-windows-screenshot1.webp&w=1920&q=75
+image: "https://filecr.com/_next/image/?url=https%3A%2F%2Fmedia.imgcdn.org%2Frepo%2F2024%2F05%2Fgit-for-windows%2F6646f2f2484fa-git-for-windows-screenshot1.webp&w=1920&q=75"
 tags: [git, version control, programming, developer tools, collaboration]
-
 ---
+
 
 > _“Git is the invisible glue that keeps your codebase and team in sync.”_
 
