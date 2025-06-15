@@ -30,12 +30,32 @@ It doesn’t just work — it communicates **intention** clearly.
 
 ## ✨ Why Clean Code Matters
 
-| 🚫 Messy Code                 | ✅ Clean Code                           |
-|:-----------------------------|:-------------------------------------:|
-| Hard to debug                 | Easy to trace and fix                  |
-| Risky to change               | Safe to extend or refactor             |
-| Difficult to onboard new devs | Smooth knowledge transfer              |
-| Slow development over time    | Sustainable growth and scalability     |
+<table style="border-collapse: collapse; width: 100%;">
+  <thead>
+    <tr>
+      <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">🚫 Messy Code</th>
+      <th style="border: 1px solid #ddd; padding: 8px; text-align: center;">✅ Clean Code</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border: 1px solid #ddd; padding: 8px;">Hard to debug</td>
+      <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">Easy to trace and fix</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ddd; padding: 8px;">Risky to change</td>
+      <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">Safe to extend or refactor</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ddd; padding: 8px;">Difficult to onboard new devs</td>
+      <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">Smooth knowledge transfer</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ddd; padding: 8px;">Slow development over time</td>
+      <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">Sustainable growth and scalability</td>
+    </tr>
+  </tbody>
+</table>
 
 > Clean code is an investment that pays long-term dividends.
 
