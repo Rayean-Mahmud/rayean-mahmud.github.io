@@ -32,12 +32,32 @@ These tools aim to make **building software faster, cheaper, and more accessible
 
 ## 📈 Why Is It Growing So Fast?
 
-| Trend | Impact |
-|------|--------|
-| 🌍 Digital Transformation | Businesses need apps, fast. LCNC tools meet that demand. |
-| 🧑‍💼 Citizen Developers | Non-tech roles want to solve problems without IT bottlenecks. |
-| 🧪 Prototyping Speed | Startups can test and iterate ideas in hours, not weeks. |
-| 💰 Cost Efficiency | Less reliance on large dev teams for simple workflows. |
+<table style="border-collapse: collapse; width: 100%; margin: 1em 0;">
+  <thead>
+    <tr>
+      <th style="border: 1px solid #ddd; padding: 10px; background-color: #f4f4f4; text-align: left;">Trend</th>
+      <th style="border: 1px solid #ddd; padding: 10px; background-color: #f4f4f4; text-align: left;">Impact</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border: 1px solid #ddd; padding: 10px;">🌍 Digital Transformation</td>
+      <td style="border: 1px solid #ddd; padding: 10px;">Businesses need apps, fast. LCNC tools meet that demand.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ddd; padding: 10px;">🧑‍💼 Citizen Developers</td>
+      <td style="border: 1px solid #ddd; padding: 10px;">Non-tech roles want to solve problems without IT bottlenecks.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ddd; padding: 10px;">🧪 Prototyping Speed</td>
+      <td style="border: 1px solid #ddd; padding: 10px;">Startups can test and iterate ideas in hours, not weeks.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ddd; padding: 10px;">💰 Cost Efficiency</td>
+      <td style="border: 1px solid #ddd; padding: 10px;">Less reliance on large dev teams for simple workflows.</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
