@@ -128,5 +128,5 @@ You don’t need to chase every new framework — but you do need to **stay curi
 
 ---
 
-Feel free to share your thoughts or connect with me on [GitHub](https://github.com/your-username) or [LinkedIn](https://linkedin.com/in/your-profile)!
+Feel free to share your thoughts or connect with me on [LinkedIn](https://www.linkedin.com/in/rayean-mahmud-arnob-a78345173/)
 
