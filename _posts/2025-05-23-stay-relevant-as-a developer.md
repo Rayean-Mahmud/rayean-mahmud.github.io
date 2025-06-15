@@ -2,7 +2,7 @@
 title: "How to Stay Relevant as a Developer in a Fast-Changing World"
 layout: post
 author: rayean
-categories: [Tech, Self_Development]
+categories: [Tech, Self Development]
 tags: [developer, future-proof, career, technology, learning]
 image: https://www.cyberark.com/wp-content/uploads/2019/11/Developer.jpg
 ---
