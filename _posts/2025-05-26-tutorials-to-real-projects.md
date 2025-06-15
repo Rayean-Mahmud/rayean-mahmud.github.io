@@ -90,14 +90,36 @@ You’ll learn **more in one messy launch** than in 10 polished tutorials.
 ---
 
 ## 📈 How Real Projects Change You
-
-| Tutorials | Real Projects |
-|----------|----------------|
-| Follow instructions | Make decisions |
-| Syntax focus | Architecture focus |
-| Fixed outcomes | Open-ended problem solving |
-| Passive | Active |
-| Safe | Messy, but rewarding |
+<table style="border-collapse: collapse; width: 100%; margin: 1em 0;">
+  <thead>
+    <tr>
+      <th style="border: 1px solid #ddd; padding: 10px; background-color: #f4f4f4; text-align: left;">Tutorials</th>
+      <th style="border: 1px solid #ddd; padding: 10px; background-color: #f4f4f4; text-align: left;">Real Projects</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border: 1px solid #ddd; padding: 10px;">Follow instructions</td>
+      <td style="border: 1px solid #ddd; padding: 10px;">Make decisions</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ddd; padding: 10px;">Syntax focus</td>
+      <td style="border: 1px solid #ddd; padding: 10px;">Architecture focus</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ddd; padding: 10px;">Fixed outcomes</td>
+      <td style="border: 1px solid #ddd; padding: 10px;">Open-ended problem solving</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ddd; padding: 10px;">Passive</td>
+      <td style="border: 1px solid #ddd; padding: 10px;">Active</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ddd; padding: 10px;">Safe</td>
+      <td style="border: 1px solid #ddd; padding: 10px;">Messy, but rewarding</td>
+    </tr>
+  </tbody>
+</table>
 
 > Real growth starts where comfort ends.
 
