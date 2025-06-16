@@ -9,7 +9,7 @@ comments: true
 
 ---
 
-> _"The feeling that you're a fraud—even when you're succeeding—is more common in tech than you think."_
+> _"Doubting your abilities despite your accomplishments? You're not alone—many in tech quietly feel the same."_
 
 ---
 
