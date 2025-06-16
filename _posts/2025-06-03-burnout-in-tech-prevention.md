@@ -4,7 +4,7 @@ title: "Burnout in Tech: How to Recognize and Prevent It"
 author: rayean
 categories: [Self Development, Productivity]
 image: https://conference.eurostarsoftwaretesting.com/wp-content/uploads/2021/03/es-blog-preventing-burnout-in-the-tech-industry-feature-image-two.jpg
-tags: [ burnout, stress-management,deep-work, productivity, focus, digital wellness]
+tags: [ featured, burnout, stress-management,deep-work, productivity, focus, digital wellness]
 ---
 
 
