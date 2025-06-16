@@ -5,7 +5,7 @@ layout: post
 title: "Burnout in Tech: How to Recognize and Prevent It"
 author: rayean
 categories: [Mental Health, Digital Wellness]
-image: https://media.licdn.com/dms/image/v2/D4D12AQG0iR2-uJUawQ/article-cover_image-shrink_600_2000/B4DZa_XomLHEAU-/0/1746967366414?e=2147483647&v=beta&t=OPqwfb1Fhcu27Pocst_E_yNZ71FaKiOO94d37tVylNo
+image: https://conference.eurostarsoftwaretesting.com/wp-content/uploads/2021/03/es-blog-preventing-burnout-in-the-tech-industry-feature-image-two.jpg
 tags: [burnout, stress management, tech ]
 
 ---
