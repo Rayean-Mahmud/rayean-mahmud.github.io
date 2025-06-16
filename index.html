@@ -7,169 +7,85 @@ description: "Welcome to my personal site where I share projects, tutorials, and
 ---
 
 <style>
-  /* Container tweaks */
-  .container {
-    max-width: 1140px;
-    margin: 0 auto;
-    padding: 1rem 15px 3rem;
-  }
-
-  /* Card styles */
-  .card {
-    border-radius: 0.6rem;
-    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
-    transition: box-shadow 0.3s ease;
-    background: #fff;
-  }
-  .card:hover {
-    box-shadow: 0 12px 20px rgba(0,0,0,0.15);
-  }
-
-  /* Top latest post image */
+  /* Reduce header image height */
   .topfirstimage {
-    border-top-left-radius: 0.6rem;
-    border-top-right-radius: 0.6rem;
-    height: 260px;
-    background-position: center center;
+    height: 160px !important;
     background-size: cover;
     background-repeat: no-repeat;
-    transition: transform 0.5s ease;
-  }
-  .card:hover .topfirstimage {
-    transform: scale(1.05);
+    border-radius: 6px;
   }
 
-  /* Post excerpts */
-  .excerpt {
-    font-size: 1rem;
-    line-height: 1.5;
-    color: #555;
-    margin-bottom: 0.75rem;
+  /* Green theme colors */
+  :root {
+    --primary-green: #2a9d8f;
+    --primary-green-dark: #21867a;
+    --text-dark: #264653;
+    --light-bg: #e0f2f1;
   }
 
-  /* Headings */
-  h2.h4 {
-    font-weight: 700;
-    font-size: 1.6rem;
-    margin-bottom: 0.5rem;
+  /* Card style adjustments */
+  .card {
+    border-radius: 8px;
+    transition: box-shadow 0.3s ease;
+    cursor: pointer;
   }
-  h2.h6 {
-    font-weight: 600;
-    font-size: 1.15rem;
+  .card:hover {
+    box-shadow: 0 8px 20px rgba(42, 157, 143, 0.3);
   }
 
-  /* Category links */
-  .catlist a {
-    color: #6c757d;
+  .card-body a.text-dark {
+    color: var(--text-dark);
     text-decoration: none;
-    font-size: 0.85rem;
+    transition: color 0.3s ease;
+  }
+  .card-body a.text-dark:hover {
+    color: var(--primary-green-dark);
+  }
+
+  .excerpt {
+    color: #444;
+  }
+
+  /* Category links green and subtle underline on hover */
+  .catlist a {
+    color: var(--primary-green);
+    text-decoration: none;
+    font-weight: 600;
+    transition: text-decoration 0.3s ease;
   }
   .catlist a:hover {
-    color: #0056b3;
     text-decoration: underline;
   }
-  .sep {
-    margin: 0 4px;
-  }
 
-  /* Date styling */
-  small.text-muted {
-    font-size: 0.8rem;
-  }
-
-  /* Smaller post images */
-  .col-md-4 img {
-    border-radius: 0.4rem;
-    transition: transform 0.3s ease;
-  }
-  .col-md-4 img:hover {
-    transform: scale(1.05);
-  }
-
-  /* Sticky post jumbotron */
+  /* Sticky post jumbotron updated with green background */
   .jumbotron-home {
-    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    background-color: var(--primary-green);
     color: #fff;
-    border-radius: 1rem;
+    border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 10px 20px rgba(38, 70, 154, 0.5);
-    margin-bottom: 2rem;
-  }
-  .jumbotron-home h1 {
-    font-weight: 800;
-    font-size: 2.5rem;
-  }
-  .jumbotron-home p.lead {
-    font-size: 1.25rem;
-    opacity: 0.9;
   }
   .jumbotron-home a.btn-dark {
     background-color: #fff;
-    color: #2575fc;
+    color: var(--primary-green);
     font-weight: 600;
-    padding: 0.75rem 1.5rem;
-    border-radius: 50px;
+    border-radius: 4px;
+    padding: 10px 20px;
     transition: background-color 0.3s ease, color 0.3s ease;
   }
   .jumbotron-home a.btn-dark:hover {
-    background-color: #e0e0e0;
-    color: #1a54b8;
-  }
-  .jumbotron-home .col-md-6.d-none.d-md-block {
-    background-position: center;
-    background-size: cover;
-    border-radius: 0 1rem 1rem 0;
-    min-height: 280px;
+    background-color: var(--primary-green-dark);
+    color: #fff;
   }
 
-  /* Pagination */
-  .pagination {
-    display: flex;
-    justify-content: center;
-    padding-left: 0;
-    list-style: none;
-    border-radius: 0.4rem;
-  }
-  .page-item {
-    margin: 0 0.25rem;
-  }
-  .page-link {
-    color: #2575fc;
-    padding: 0.5rem 0.75rem;
-    border: 1px solid #ddd;
-    border-radius: 0.4rem;
-    text-decoration: none;
-    transition: background-color 0.3s ease, color 0.3s ease;
-  }
-  .page-link:hover {
-    background-color: #2575fc;
-    color: #fff;
-    border-color: #2575fc;
-  }
-  .page-item.disabled .page-link {
-    color: #ccc;
-    pointer-events: none;
-    background-color: #f8f9fa;
-    border-color: #ddd;
-  }
-  .page-item.active .page-link,
-  .page-item.disabled span.page-link {
-    background-color: #2575fc;
-    color: #fff;
-    border-color: #2575fc;
-    pointer-events: none;
+  /* Reduce margin between second, third, fourth posts */
+  .mb-3 {
+    margin-bottom: 1rem !important;
   }
 
   /* Responsive tweaks */
-  @media (max-width: 767.98px) {
+  @media (max-width: 768px) {
     .topfirstimage {
-      height: 180px;
-    }
-    .jumbotron-home h1 {
-      font-size: 1.8rem;
-    }
-    .jumbotron-home .col-md-6.d-none.d-md-block {
-      display: none !important;
+      height: 140px !important;
     }
   }
 </style>
@@ -178,29 +94,28 @@ description: "Welcome to my personal site where I share projects, tutorials, and
 
   {% if page.url == "/" %}
 
-  <!-- Begin post excerpts, highlight first 4 posts -->
   <div class="row remove-site-content-margin">
 
-    <!-- latest post -->
+    <!-- latest post with smaller image height -->
     {% assign latest_post = site.posts[0] %}
-    <div class="col-md-6 mb-4">
-      <div class="card border-0">
+    <div class="col-md-6">
+      <div class="card border-0 mb-4 box-shadow">
         <a href="{{ site.baseurl }}{{ latest_post.url }}">
           <div class="topfirstimage" style="background-image: url({% if latest_post.image contains '://' %}{{ latest_post.image }}{% else %}{{ site.baseurl }}/{{ latest_post.image }}{% endif %});"></div>
         </a>
-        <div class="card-body px-3 py-3 d-flex flex-column align-items-start">
+        <div class="card-body px-0 pb-0 d-flex flex-column align-items-start">
           <h2 class="h4 font-weight-bold">
             <a class="text-dark" href="{{ site.baseurl }}{{ latest_post.url }}">{{ latest_post.title }}</a>
           </h2>
           <p class="excerpt">
             {{ latest_post.excerpt | strip_html | strip_newlines | truncate: 136 }}
           </p>
-          <div class="w-100 d-flex justify-content-between align-items-center">
-            <small class="text-muted">
+          <div>
+            <small class="d-block text-muted">
               In
               <span class="catlist">
                 {% for category in latest_post.categories %}
-                  <a class="text-capitalize" href="{{ site.baseurl }}/categories.html#{{ category | downcase }}">{{ category }}</a>{% unless forloop.last %}, {% endunless %}
+                  <a class="text-capitalize" href="{{ site.baseurl }}/categories.html#{{ category | downcase }}">{{ category }}</a>{% unless forloop.last %}<span class="sep">, </span>{% endunless %}
                 {% endfor %}
               </span>
             </small>
@@ -216,23 +131,23 @@ description: "Welcome to my personal site where I share projects, tutorials, and
 
       <!-- second latest post -->
       {% assign second_post = site.posts[1] %}
-      <div class="mb-4 d-flex align-items-center">
+      <div class="mb-3 d-flex align-items-center">
         {% if second_post.image %}
-          <div class="col-md-4 px-0">
+          <div class="col-md-4 px-1">
             <a href="{{ site.baseurl }}{{ second_post.url }}">
-              <img class="w-100" src="{% if second_post.image contains '://' %}{{ second_post.image }}{% else %}{{ site.baseurl }}/{{ second_post.image }}{% endif %}" alt="{{ second_post.title }}">
+              <img class="w-100 rounded" src="{% if second_post.image contains '://' %}{{ second_post.image }}{% else %}{{ site.baseurl }}/{{ second_post.image }}{% endif %}" alt="{{ second_post.title }}">
             </a>
           </div>
         {% endif %}
-        <div class="pl-3">
-          <h2 class="mb-1 h6 font-weight-bold">
+        <div class="pl-2">
+          <h2 class="mb-2 h6 font-weight-bold">
             <a class="text-dark" href="{{ site.baseurl }}{{ second_post.url }}">{{ second_post.title }}</a>
           </h2>
-          <small class="text-muted d-block mb-1">
+          <small class="d-block text-muted">
             In
             <span class="catlist">
               {% for category in second_post.categories %}
-                <a class="text-capitalize" href="{{ site.baseurl }}/categories.html#{{ category | downcase }}">{{ category }}</a>{% unless forloop.last %}, {% endunless %}
+                <a class="text-capitalize" href="{{ site.baseurl }}/categories.html#{{ category | downcase }}">{{ category }}</a>{% unless forloop.last %}<span class="sep">, </span>{% endunless %}
               {% endfor %}
             </span>
           </small>
@@ -244,23 +159,23 @@ description: "Welcome to my personal site where I share projects, tutorials, and
 
       <!-- third latest post -->
       {% assign third_post = site.posts[2] %}
-      <div class="mb-4 d-flex align-items-center">
+      <div class="mb-3 d-flex align-items-center">
         {% if third_post.image %}
-          <div class="col-md-4 px-0">
+          <div class="col-md-4 px-1">
             <a href="{{ site.baseurl }}{{ third_post.url }}">
-              <img class="w-100" src="{% if third_post.image contains '://' %}{{ third_post.image }}{% else %}{{ site.baseurl }}/{{ third_post.image }}{% endif %}" alt="{{ third_post.title }}">
+              <img class="w-100 rounded" src="{% if third_post.image contains '://' %}{{ third_post.image }}{% else %}{{ site.baseurl }}/{{ third_post.image }}{% endif %}" alt="{{ third_post.title }}">
             </a>
           </div>
         {% endif %}
-        <div class="pl-3">
-          <h2 class="mb-1 h6 font-weight-bold">
+        <div class="pl-2">
+          <h2 class="mb-2 h6 font-weight-bold">
             <a class="text-dark" href="{{ site.baseurl }}{{ third_post.url }}">{{ third_post.title }}</a>
           </h2>
-          <small class="text-muted d-block mb-1">
+          <small class="d-block text-muted">
             In
             <span class="catlist">
               {% for category in third_post.categories %}
-                <a class="text-capitalize" href="{{ site.baseurl }}/categories.html#{{ category | downcase }}">{{ category }}</a>{% unless forloop.last %}, {% endunless %}
+                <a class="text-capitalize" href="{{ site.baseurl }}/categories.html#{{ category | downcase }}">{{ category }}</a>{% unless forloop.last %}<span class="sep">, </span>{% endunless %}
               {% endfor %}
             </span>
           </small>
@@ -272,23 +187,23 @@ description: "Welcome to my personal site where I share projects, tutorials, and
 
       <!-- fourth latest post -->
       {% assign fourth_post = site.posts[3] %}
-      <div class="mb-4 d-flex align-items-center">
+      <div class="mb-3 d-flex align-items-center">
         {% if fourth_post.image %}
-          <div class="col-md-4 px-0">
+          <div class="col-md-4 px-1">
             <a href="{{ site.baseurl }}{{ fourth_post.url }}">
-              <img class="w-100" src="{% if fourth_post.image contains '://' %}{{ fourth_post.image }}{% else %}{{ site.baseurl }}/{{ fourth_post.image }}{% endif %}" alt="{{ fourth_post.title }}">
+              <img class="w-100 rounded" src="{% if fourth_post.image contains '://' %}{{ fourth_post.image }}{% else %}{{ site.baseurl }}/{{ fourth_post.image }}{% endif %}" alt="{{ fourth_post.title }}">
             </a>
           </div>
         {% endif %}
-        <div class="pl-3">
-          <h2 class="mb-1 h6 font-weight-bold">
+        <div class="pl-2">
+          <h2 class="mb-2 h6 font-weight-bold">
             <a class="text-dark" href="{{ site.baseurl }}{{ fourth_post.url }}">{{ fourth_post.title }}</a>
           </h2>
-          <small class="text-muted d-block mb-1">
+          <small class="d-block text-muted">
             In
             <span class="catlist">
               {% for category in fourth_post.categories %}
-                <a class="text-capitalize" href="{{ site.baseurl }}/categories.html#{{ category | downcase }}">{{ category }}</a>{% unless forloop.last %}, {% endunless %}
+                <a class="text-capitalize" href="{{ site.baseurl }}/categories.html#{{ category | downcase }}">{{ category }}</a>{% unless forloop.last %}<span class="sep">, </span>{% endunless %}
               {% endfor %}
             </span>
           </small>
@@ -305,17 +220,17 @@ description: "Welcome to my personal site where I share projects, tutorials, and
   <!-- Sticky posts -->
   {% for post in site.posts %}
     {% if post.tags contains "sticky" %}
-      <div class="jumbotron jumbotron-fluid jumbotron-home pt-4 pb-4 mt-4 mb-4 position-relative">
+      <div class="jumbotron jumbotron-fluid jumbotron-home pt-0 pb-0 mt-3 mb-2rem position-relative">
         <div class="pl-4 pr-0 h-100 tofront">
-          <div class="row justify-content-between no-gutters">
-            <div class="col-md-6 pt-5 pb-5 pr-lg-4 align-self-center">
+          <div class="row justify-content-between">
+            <div class="col-md-6 pt-6 pb-6 pr-lg-4 align-self-center">
               <h1 class="mb-3">{{ post.title }}</h1>
-              <p class="mb-4 lead">
+              <p class="mb-3 lead">
                 {{ post.excerpt | strip_html | strip_newlines | truncate: 136 }}
               </p>
               <a href="{{ site.baseurl }}{{ post.url }}" class="btn btn-dark">Read More</a>
             </div>
-            <div class="col-md-6 d-none d-md-block pr-0" style="background-image: url({% if post.image contains '://' %}{{ post.image }}{% else %}{{ site.baseurl }}/{{ post.image }}{% endif %});">
+            <div class="col-md-6 d-none d-md-block pr-0" style="background-size:cover; background-image: url({% if post.image contains '://' %}{{ post.image }}{% else %}{{ site.baseurl }}/{{ post.image }}{% endif %}); border-radius: 0 8px 8px 0;">
             </div>
           </div>
         </div>
@@ -323,15 +238,15 @@ description: "Welcome to my personal site where I share projects, tutorials, and
     {% endif %}
   {% endfor %}
 
-  {% endif %} <!-- endif page.url == "/" -->
+  {% endif %}
 
-  <!-- Posts loop with pagination -->
+  <!-- Remaining posts loop and pagination -->
 
-  <div class="row mt-4">
+  <div class="row mt-3">
 
     <div class="col-md-8 main-loop">
 
-      <h4 class="font-weight-bold spanborder mb-4"><span>All Stories</span></h4>
+      <h4 class="font-weight-bold spanborder"><span>All Stories</span></h4>
 
       {% for post in paginator.posts %}
         {% include main-loop-card.html %}
@@ -372,6 +287,9 @@ description: "Welcome to my personal site where I share projects, tutorials, and
     </div>
 
   </div>
+
+</div>
+
 
 </div>
 
