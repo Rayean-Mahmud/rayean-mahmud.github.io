@@ -105,31 +105,54 @@ description: "Welcome to my personal site where I share projects, tutorials, and
         {% include main-loop-card.html %}
       {% endfor %}
 
-      <!-- Pagination -->
-      <div class="mt-5">
-        {% if paginator.total_pages > 1 %}
-          <ul class="pagination">
-            {% if paginator.previous_page %}
-              <li class="page-item"><a class="page-link" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a></li>
-            {% else %}
-              <li class="page-item disabled"><span class="page-link">&laquo;</span></li>
-            {% endif %}
-            {% for page in (1..paginator.total_pages) %}
-              {% if page == paginator.page %}
-                <li class="page-item active"><span class="page-link">{{ page }}</span></li>
-              {% else %}
-                <li class="page-item"><a class="page-link" href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a></li>
-              {% endif %}
-            {% endfor %}
-            {% if paginator.next_page %}
-              <li class="page-item"><a class="page-link" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a></li>
-            {% else %}
-              <li class="page-item disabled"><span class="page-link">&raquo;</span></li>
-            {% endif %}
-          </ul>
+   <!-- Pagination -->
+<div class="mt-5">
+  {% if paginator.total_pages > 1 %}
+    <ul class="pagination">
+
+      <!-- Previous button -->
+      {% if paginator.previous_page %}
+        <li class="page-item">
+          <a class="page-link" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
+        </li>
+      {% else %}
+        <li class="page-item disabled">
+          <span class="page-link">&laquo;</span>
+        </li>
+      {% endif %}
+
+      <!-- Page numbers -->
+      {% for page in (1..paginator.total_pages) %}
+        {% if page == paginator.page %}
+          <li class="page-item active">
+            <span class="page-link">{{ page }}</span>
+          </li>
+        {% elsif page == 1 %}
+          <li class="page-item">
+            <a class="page-link" href="{{ site.baseurl }}/">{{ page }}</a>
+          </li>
+        {% else %}
+          <li class="page-item">
+            <a class="page-link" href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+          </li>
         {% endif %}
-      </div>
-    </div>
+      {% endfor %}
+
+      <!-- Next button -->
+      {% if paginator.next_page %}
+        <li class="page-item">
+          <a class="page-link" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
+        </li>
+      {% else %}
+        <li class="page-item disabled">
+          <span class="page-link">&raquo;</span>
+        </li>
+      {% endif %}
+
+    </ul>
+  {% endif %}
+</div>
+
 
     <!-- Sidebar -->
     <div class="col-md-4">
