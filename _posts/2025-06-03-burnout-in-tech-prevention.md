@@ -1,14 +1,12 @@
-
 ---
-
 layout: post
 title: "Burnout in Tech: How to Recognize and Prevent It"
 author: rayean
-categories: [Mental Health, Digital Wellness]
+categories: [Self Development, Productivity]
 image: https://conference.eurostarsoftwaretesting.com/wp-content/uploads/2021/03/es-blog-preventing-burnout-in-the-tech-industry-feature-image-two.jpg
-tags: [burnout, stress management, tech ]
-
+tags: [ burnout, stress-management,deep-work, productivity, focus, digital wellness]
 ---
+
 
 > _"You can’t do your best work if you’re constantly running on empty."_
 
