@@ -4,7 +4,7 @@ title:  "The Rise of Low-Code/No-Code: Should Developers Worry?"
 author: rayean
 categories: [ Tech]
 image: https://media.licdn.com/dms/image/v2/D4E12AQGdknBJ7LX8DA/article-cover_image-shrink_720_1280/B4EZYYPotqHYAI-/0/1744163475441?e=2147483647&v=beta&t=BeosVdr8NziFUQQw3JsgPt779n21xXmAqyh2Wu8PjMY
-tags: [featured, sticky, low-code, no-code, development, future-of-tech, productivity, software]
+tags: [featured, low-code, no-code, development, future-of-tech, productivity, software]
 ---
 
 
