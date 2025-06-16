@@ -4,7 +4,7 @@ title:  "Welcome to Jekyll!"
 author: rayean
 categories: [ Tech ]
 image: assets/images/demo1.jpg
-tags: [sticky]
+
 comments: true
 
 ---
