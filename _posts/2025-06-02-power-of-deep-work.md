@@ -31,29 +31,29 @@ In contrast, **Shallow Work** includes low-value tasks like checking emails, att
 
 ## 🔍 Deep Work vs. Shallow Work
 
-<table>
+<table style="width: 100%; border-collapse: collapse;">
   <thead>
-    <tr>
-      <th>Deep Work</th>
-      <th>Shallow Work</th>
+    <tr style="background-color: #f2f2f2;">
+      <th style="border: 2px solid black; padding: 10px;">Deep Work</th>
+      <th style="border: 2px solid black; padding: 10px;">Shallow Work</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>High concentration</td>
-      <td>Low concentration</td>
+      <td style="border: 1px solid black; padding: 10px;">High concentration</td>
+      <td style="border: 1px solid black; padding: 10px;">Low concentration</td>
     </tr>
     <tr>
-      <td>Creative, analytical thinking</td>
-      <td>Reactive, logistical tasks</td>
+      <td style="border: 1px solid black; padding: 10px;">Creative, analytical thinking</td>
+      <td style="border: 1px solid black; padding: 10px;">Reactive, logistical tasks</td>
     </tr>
     <tr>
-      <td>Long-term value creation</td>
-      <td>Short-term busyness</td>
+      <td style="border: 1px solid black; padding: 10px;">Long-term value creation</td>
+      <td style="border: 1px solid black; padding: 10px;">Short-term busyness</td>
     </tr>
     <tr>
-      <td>Fulfilling, meaningful work</td>
-      <td>Mentally draining, low ROI</td>
+      <td style="border: 1px solid black; padding: 10px;">Fulfilling, meaningful work</td>
+      <td style="border: 1px solid black; padding: 10px;">Mentally draining, low ROI</td>
     </tr>
   </tbody>
 </table>
@@ -110,44 +110,57 @@ This fragmented attention prevents us from reaching **flow** — the deeply focu
 ---
 
 ## 📈 What You Gain from Deep Work
-<table>
+<table style="width: 100%; border-collapse: collapse;">
   <thead>
-    <tr>
-      <th>Benefit</th>
-      <th>Description</th>
+    <tr style="background-color: #f2f2f2;">
+      <th style="border: 2px solid black; padding: 10px;">Benefit</th>
+      <th style="border: 2px solid black; padding: 10px;">Description</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>Higher Productivity</td>
-      <td>Get more done in less time</td>
+      <td style="border: 1px solid black; padding: 10px;">Higher Productivity</td>
+      <td style="border: 1px solid black; padding: 10px;">Get more done in less time</td>
     </tr>
     <tr>
-      <td>Better Work Quality</td>
-      <td>Deeper thinking leads to stronger outcomes</td>
+      <td style="border: 1px solid black; padding: 10px;">Better Work Quality</td>
+      <td style="border: 1px solid black; padding: 10px;">Deeper thinking leads to stronger outcomes</td>
     </tr>
     <tr>
-      <td>Faster Skill Development</td>
-      <td>Learn and grow at an accelerated pace</td>
+      <td style="border: 1px solid black; padding: 10px;">Faster Skill Development</td>
+      <td style="border: 1px solid black; padding: 10px;">Learn and grow at an accelerated pace</td>
     </tr>
     <tr>
-      <td>Sense of Fulfillment</td>
-      <td>Feel progress and purpose</td>
+      <td style="border: 1px solid black; padding: 10px;">Sense of Fulfillment</td>
+      <td style="border: 1px solid black; padding: 10px;">Feel progress and purpose</td>
     </tr>
     <tr>
-      <td>Professional Edge</td>
-      <td>Stand out in a noisy, distracted world</td>
+      <td style="border: 1px solid black; padding: 10px;">Professional Edge</td>
+      <td style="border: 1px solid black; padding: 10px;">Stand out in a noisy, distracted world</td>
     </tr>
   </tbody>
 </table>
+
   |
 
 ---
-
 ## 📚 Recommended Resources
 
-- **Book**: _Deep Work_ by Cal Newport  
-- **App**: [Forest](https://www.forestapp.cc/) – gamify focus time 
+### 📘 Books
+- **_Deep Work_** by Cal Newport — The foundational guide to focused success in a distracted world.  
+- **_Digital Minimalism_** by Cal Newport — Learn how to reclaim your attention in the age of noise.  
+- **_Atomic Habits_** by James Clear — Build habits that support deep, focused work.  
+- **_The One Thing_** by Gary Keller — Discover how focusing on what truly matters drives results.
+
+### 📱 Apps & Tools
+- [**Forest**](https://www.forestapp.cc/) — Gamify your focus sessions by growing a digital tree.  
+- [**Pomofocus**](https://pomofocus.io/) — A customizable Pomodoro timer to structure deep work blocks.  
+- [**Notion**](https://www.notion.so/) — Organize your knowledge, tasks, and goals all in one place.  
+
+
+### 🎥 Videos & Talks
+- [**Cal Newport on Deep Work (TEDx)**](https://www.youtube.com/watch?v=3E7hkPZ-HTk)   
+- [**The Science of Productivity – AsapSCIENCE**](https://www.youtube.com/watch?v=lHfjvYzr-3g)
 
 ---
 
