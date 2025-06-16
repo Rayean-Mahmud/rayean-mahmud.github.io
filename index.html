@@ -8,10 +8,11 @@ description: "Welcome to my personal site where I share projects, tutorials, and
 
 <div class="container">
 
-  {% if page.url == "/" %}
+  {% if paginator.page == 1 %}
 
   <!-- Highlighted Posts Section -->
   <div class="row remove-site-content-margin">
+
     <!-- Latest post on the left -->
     {% assign latest_post = site.posts[0] %}
     <div class="col-md-6 mb-4">
@@ -70,6 +71,7 @@ description: "Welcome to my personal site where I share projects, tutorials, and
         </div>
       {% endfor %}
     </div>
+
   </div>
 
   <!-- Sticky Posts -->
@@ -95,19 +97,22 @@ description: "Welcome to my personal site where I share projects, tutorials, and
 
   {% endif %}
 
-  <!-- All Stories and Sidebar -->
+  <!-- All Stories + Pagination + Sidebar -->
   <div class="row mt-4">
-    <!-- All Stories -->
+
+    <!-- Left: Main loop -->
     <div class="col-md-8 main-loop">
       <h4 class="font-weight-bold spanborder"><span>All Stories</span></h4>
+
       {% for post in paginator.posts %}
         {% include main-loop-card.html %}
       {% endfor %}
 
-      <!-- Pagination -->
+      <!-- Pagination (must stay inside col-md-8) -->
       <div class="mt-5">
         {% if paginator.total_pages > 1 %}
           <ul class="pagination">
+
             <!-- Previous -->
             {% if paginator.previous_page %}
               <li class="page-item">
@@ -138,17 +143,20 @@ description: "Welcome to my personal site where I share projects, tutorials, and
             {% else %}
               <li class="page-item disabled"><span class="page-link">&raquo;</span></li>
             {% endif %}
+
           </ul>
         {% endif %}
       </div>
     </div>
 
-    <!-- Sidebar -->
+    <!-- Right: Sidebar -->
     <div class="col-md-4">
       {% include sidebar-featured.html %}
     </div>
+
   </div>
 
 </div>
+
 
 
