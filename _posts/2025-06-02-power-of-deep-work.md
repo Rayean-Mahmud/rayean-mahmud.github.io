@@ -4,7 +4,7 @@ title: "The Power of Deep Work in a Distracted World"
 author: rayean
 categories: [Self Development, Productivity]
 image: https://wallpaperaccess.com/full/11149735.jpg
-tags: [deep work, productivity, self development, focus, attention, digital wellness]
+tags: [ featured, deep work, productivity, self development, focus, attention, digital wellness]
 ---
 
 > _“Clarity about what matters provides clarity about what does not.”_ — Cal Newport
