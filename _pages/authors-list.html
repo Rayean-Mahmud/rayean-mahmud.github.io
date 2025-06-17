@@ -4,163 +4,67 @@ layout: default
 permalink: "/about-me.html"
 ---
 
-<!-- Fonts & Toggle Script -->
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
-
-<style>
-  :root {
-    --bg-color: #0d0d0d;
-    --text-color: #ffffff;
-    --card-bg: rgba(255, 255, 255, 0.05);
-    --neon-accent: #39ff14;
-    --neon-alt: #00ffff;
-    --border-color: #39ff14;
-  }
-
-  [data-theme="light"] {
-    --bg-color: #ffffff;
-    --text-color: #000000;
-    --card-bg: #f0f0f0;
-    --neon-accent: #007acc;
-    --neon-alt: #ff0077;
-    --border-color: #007acc;
-  }
-
-  body {
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    font-family: 'Orbitron', sans-serif;
-    transition: all 0.3s ease;
-  }
-
-  .glow-title {
-    color: var(--neon-accent);
-    text-shadow: 0 0 5px var(--neon-accent), 0 0 10px var(--neon-alt);
-    border-bottom: 2px solid var(--neon-alt);
-    display: inline-block;
-    margin-bottom: 1rem;
-  }
-
-  .card-neon {
-    background: var(--card-bg);
-    border: 1px solid var(--border-color);
-    border-radius: 15px;
-    box-shadow: 0 0 15px var(--neon-alt);
-    padding: 1.5rem;
-    transition: transform 0.3s ease;
-  }
-
-  .card-neon:hover {
-    transform: scale(1.02);
-    box-shadow: 0 0 25px var(--neon-accent);
-  }
-
-  .rounded-circle {
-    border: 2px solid var(--neon-alt);
-    box-shadow: 0 0 10px var(--neon-alt);
-  }
-
-  .btn-toggle {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    padding: 8px 16px;
-    background-color: var(--neon-accent);
-    color: black;
-    font-weight: bold;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    box-shadow: 0 0 10px var(--neon-accent);
-  }
-
-  .btn-toggle:hover {
-    background-color: var(--neon-alt);
-    box-shadow: 0 0 15px var(--neon-alt);
-  }
-
-  .badge-section img {
-    margin: 4px;
-  }
-
-  .section-title {
-    text-align: center;
-    margin-top: 2rem;
-    font-size: 1.25rem;
-  }
-</style>
-
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const themeToggle = document.getElementById("theme-toggle");
-    const root = document.documentElement;
-    themeToggle.addEventListener("click", () => {
-      const theme = root.getAttribute("data-theme") === "light" ? "dark" : "light";
-      root.setAttribute("data-theme", theme);
-      themeToggle.textContent = theme === "light" ? "🌙 Night Mode" : "☀️ Day Mode";
-    });
-  });
-</script>
-
-<div class="container" style="position: relative;" data-theme="dark">
-  <button class="btn-toggle" id="theme-toggle">☀️ Day Mode</button>
-
-  <h2 class="glow-title">About Me</h2>
-
+<!-- Only show your own profile without looping -->
+<div class="container">
+  <h4 class="font-weight-bold spanborder"><span>About Me</span></h4>
   <div class="row listauthor">
-    <div class="col-lg-8 mb-4">
-      <div class="card-neon">
-        <div class="row">
-          <div class="col-md-3 mb-4 mb-md-0 text-center">
-            <img alt="Rayean Mahmud Arnob" src="{{ site.baseurl }}/assets/images/avatar1.jpg" class="rounded-circle" height="100" width="100">
-          </div>
-          <div class="col-md-9">
-            <h4 class="mb-0">Rayean Mahmud Arnob</h4>
-            <small class="d-inline-block mt-1 mb-3 font-weight-normal">
-              Crafting Apps, Designing Interfaces & Writing with Purpose
-            </small>
-            <p>
-              🎓 I am a <strong>Computer Science & Engineering graduate</strong> from <a href="https://www.bracu.ac.bd/" target="_blank">BRAC University</a>.
-              💼 I'm passionate about Flutter, Python, Firebase, and UI/UX design.
-              🌍 I love building digital products and sharing insights on code, creativity, and personal growth through my work and writing.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
+	<div class="col-lg-8 mb-4">
+  	<div class="p-4 border rounded">
+    	<div class="row">
+      	<div class="col-md-3 mb-4 mb-md-0">
+        	<img alt="Rayean Mahmud Arnob" src="{{ site.baseurl }}/assets/images/avatar1.jpg" class="rounded-circle" height="80" width="80">
+      	</div>
+      	<div class="col-md-9">
+        	<h4 class="text-dark mb-0">Rayean Mahmud Arnob</h4>
+        	<small class="d-inline-block mt-1 mb-3 font-weight-normal">Crafting Apps, Designing Interfaces & Writing with Purpose</small>
+        	<div class="excerpt">
+         	<p>
+  🎓 I am a <strong>Computer Science & Engineering graduate</strong> from <a href="https://www.bracu.ac.bd/">BRAC University</a>. 💼 I'm passionate about Flutter, Python, Firebase, and UI/UX design. 🌍 I love building digital products and sharing insights on code, creativity, and personal growth through my work and writing.
+</p>
+
+        	</div>
+      	</div>
+    	</div>
+  	</div>
+	</div>
   </div>
 
-  <!-- Tech Stack -->
-  <h2 class="section-title glow-title">💻 Tech Stack</h2>
-  <p class="badge-section text-center">
-    <img src="https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white" alt="Flutter" />
-    <img src="https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white" alt="Dart" />
-    <img src="https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=white" alt="Firebase" />
-    <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
-    <img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white" alt="Figma" />
-    <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL" />
-  </p>
+ 
+<h2 class="mt-5" style="font-weight: bold; font-size: 1rem;">💻 Tech Stack</h2>
 
-  <!-- Expertise -->
-  <h2 class="section-title glow-title">🚀 My Expertise</h2>
   <p align="center">
-    <img src="{{ site.baseurl }}/assets/images/expertise.png" alt="Rayean's Expertise" width="720" />
+	<img src="https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white" alt="Flutter" />
+	<img src="https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white" alt="Dart" />
+	<img src="https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=white" alt="Firebase" />
+	<img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
+	<img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white" alt="Figma" />
+	<img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL" />
   </p>
 
-  <!-- Connect -->
-  <h2 class="section-title glow-title">🤝 Connect with Me</h2>
-  <p class="text-center badge-section">
-    <a href="https://linkedin.com/in/rayean-mahmud-arnob-a78345173" target="_blank">
-      <img src="https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin" alt="LinkedIn">
-    </a>
-    <a href="mailto:rayean.dev@gmail.com">
-      <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email">
-    </a>
-    <a href="https://www.upwork.com/freelancers/~0177ac14dfc0727560?mp_source=share" target="_blank">
-      <img src="https://img.shields.io/badge/Upwork-6fda44?style=for-the-badge&logo=upwork&logoColor=white" alt="Upwork">
-    </a>
-    <a href="https://wa.me/+8801642779062" target="_blank">
-      <img src="https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" alt="WhatsApp">
-    </a>
+  <h2 class="mt-5" style="font-weight: bold; font-size: 1rem;">🚀 My Expertise</h2>
+
+  <p align="center">
+	<img src="{{ site.baseurl }}/assets/images/expertise.png" alt="Rayean's Expertise" width="720" />
   </p>
+
+  <h2 class="mt-5" style="font-weight: bold; font-size: 1rem;">🤝 Connect with Me</h2>
+
+  <p align="center">
+	<a href="https://linkedin.com/in/rayean-mahmud-arnob-a78345173" target="_blank">
+  	<img src="https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin" alt="LinkedIn">
+	</a>
+	<a href="mailto:rayean.dev@gmail.com">
+  	<img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email">
+	</a>
+	<a href="https://www.upwork.com/freelancers/~0177ac14dfc0727560?mp_source=share" target="_blank">
+  	<img src="https://img.shields.io/badge/Upwork-6fda44?style=for-the-badge&logo=upwork&logoColor=white" alt="Upwork">
+	</a>
+	<a href="https://wa.me/+8801642779062" target="_blank">
+  	<img src="https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" alt="WhatsApp">
+	</a>
+  </p>
+</div>
+
+
+
 </div>
