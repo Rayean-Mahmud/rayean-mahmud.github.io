@@ -6,105 +6,6 @@ pagination:
 description: "Welcome to my personal site where I share projects, tutorials, and thoughts on tech, design, and personal growth."
 ---
 
-<!-- Cyberpunk Fonts & Meta -->
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
-
-<style>
-  :root {
-    --bg-color: #0d0d0d;
-    --neon-pink: #ff00ff;
-    --neon-cyan: #00ffff;
-    --neon-green: #39ff14;
-    --text-primary: #ffffff;
-    --text-secondary: #cccccc;
-    --highlight: var(--neon-cyan);
-    --glass-bg: rgba(255, 255, 255, 0.05);
-  }
-
-  body {
-    background-color: var(--bg-color);
-    color: var(--text-primary);
-    font-family: 'Orbitron', sans-serif;
-    background-image: linear-gradient(180deg, #0d0d0d 0%, #1a1a1a 100%);
-    position: relative;
-  }
-
-  /* Scanline Overlay */
-  body::before {
-    content: '';
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: repeating-linear-gradient(0deg, rgba(255,255,255,0.03), rgba(255,255,255,0.03) 1px, transparent 1px, transparent 2px);
-    pointer-events: none;
-    z-index: 999;
-  }
-
-  h1, h2, h3, h4 {
-    color: var(--highlight);
-    text-shadow: 0 0 6px var(--highlight);
-  }
-
-  a {
-    color: var(--neon-cyan);
-    text-decoration: none;
-  }
-
-  a:hover {
-    color: var(--neon-pink);
-    text-shadow: 0 0 5px var(--neon-pink);
-  }
-
-  .card {
-    background: var(--glass-bg);
-    border: 1px solid var(--highlight);
-    border-radius: 12px;
-    box-shadow: 0 0 15px var(--highlight);
-    transition: all 0.3s ease;
-  }
-
-  .card:hover {
-    transform: scale(1.02);
-    box-shadow: 0 0 20px var(--neon-pink);
-  }
-
-  .btn {
-    background: var(--neon-green);
-    color: black;
-    border: none;
-    padding: 10px 20px;
-    font-weight: bold;
-    border-radius: 8px;
-    box-shadow: 0 0 10px var(--neon-green);
-    transition: background 0.3s ease;
-  }
-
-  .btn:hover {
-    background: var(--neon-pink);
-    box-shadow: 0 0 15px var(--neon-pink);
-    color: #000;
-  }
-
-  .pagination .page-item .page-link {
-    background: transparent;
-    border: 1px solid var(--neon-cyan);
-    color: var(--neon-cyan);
-    transition: all 0.2s ease;
-  }
-
-  .pagination .page-item.active .page-link,
-  .pagination .page-item .page-link:hover {
-    background: var(--neon-pink);
-    color: #000;
-    border-color: var(--neon-pink);
-  }
-
-  .spanborder span {
-    border-bottom: 2px solid var(--neon-cyan);
-    padding-bottom: 3px;
-  }
-</style>
-
 <div class="container">
 
   {% if paginator.page == 1 %}
@@ -112,86 +13,86 @@ description: "Welcome to my personal site where I share projects, tutorials, and
   <!-- Highlighted Posts Section -->
   <div class="row remove-site-content-margin">
 
-    <!-- Latest post on the left -->
-    {% assign latest_post = site.posts[0] %}
-    <div class="col-md-6 mb-4">
-      <div class="card h-100">
-        <a href="{{ site.baseurl }}{{ latest_post.url }}">
-          <div style="background-image: url({% if latest_post.image contains '://' %}{{ latest_post.image }}{% else %}{{ site.baseurl }}/{{ latest_post.image }}{% endif %}); height: 300px; background-size: cover; background-position: center; border-radius: 0.5rem;"></div>
-        </a>
-        <div class="card-body px-0 pt-3">
-          <h2 class="h4 font-weight-bold">
-            <a href="{{ site.baseurl }}{{ latest_post.url }}">{{ latest_post.title }}</a>
-          </h2>
-          <p class="excerpt text-secondary">
-            {{ latest_post.excerpt | strip_html | strip_newlines | truncate: 140 }}
-          </p>
-          <div>
-            <small class="d-block">
-              In
-              <span class="catlist">
-                {% for category in latest_post.categories %}
-                  <a class="text-capitalize" href="{{ site.baseurl }}/categories.html#{{ category | downcase }}">{{ category }}</a>{% unless forloop.last %}, {% endunless %}
-                {% endfor %}
-              </span>
-            </small>
-            <small class="text-muted">{{ latest_post.date | date: '%b %d, %Y' }}</small>
-          </div>
-        </div>
-      </div>
-    </div>
+	<!-- Latest post on the left -->
+	{% assign latest_post = site.posts[0] %}
+	<div class="col-md-6 mb-4">
+  	<div class="card border-0 shadow-sm h-100">
+    	<a href="{{ site.baseurl }}{{ latest_post.url }}">
+      	<div style="background-image: url({% if latest_post.image contains '://' %}{{ latest_post.image }}{% else %}{{ site.baseurl }}/{{ latest_post.image }}{% endif %}); height: 300px; background-size: cover; background-position: center; border-radius: 0.5rem;"></div>
+    	</a>
+    	<div class="card-body px-0 pt-3">
+      	<h2 class="h4 font-weight-bold">
+        	<a class="text-dark" href="{{ site.baseurl }}{{ latest_post.url }}">{{ latest_post.title }}</a>
+      	</h2>
+      	<p class="excerpt text-muted">
+        	{{ latest_post.excerpt | strip_html | strip_newlines | truncate: 140 }}
+      	</p>
+      	<div>
+        	<small class="d-block" style="color: #333;">
+          	In
+          	<span class="catlist">
+            	{% for category in latest_post.categories %}
+              	<a class="text-capitalize" style="color: #333;" href="{{ site.baseurl }}/categories.html#{{ category | downcase }}">{{ category }}</a>{% unless forloop.last %}, {% endunless %}
+            	{% endfor %}
+          	</span>
+        	</small>
+        	<small class="text-muted">{{ latest_post.date | date: '%b %d, %Y' }}</small>
+      	</div>
+    	</div>
+  	</div>
+	</div>
 
-    <!-- 2nd to 5th posts stacked vertically on right -->
-    <div class="col-md-6">
-      {% assign posts = site.posts | slice: 1, 4 %}
-      {% for post in posts %}
-        <div class="mb-4 d-flex">
-          {% if post.image %}
-            <div class="mr-3" style="width: 100px;">
-              <a href="{{ site.baseurl }}{{ post.url }}">
-                <img class="img-fluid rounded" src="{% if post.image contains '://' %}{{ post.image }}{% else %}{{ site.baseurl }}/{{ post.image }}{% endif %}" alt="{{ post.title }}">
-              </a>
-            </div>
-          {% endif %}
-          <div>
-            <h2 class="h6 font-weight-bold mb-1">
-              <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-            </h2>
-            <small class="d-block">
-              In
-              <span class="catlist">
-                {% for category in post.categories %}
-                  <a class="text-capitalize" href="{{ site.baseurl }}/categories.html#{{ category | downcase }}">{{ category }}</a>{% unless forloop.last %}, {% endunless %}
-                {% endfor %}
-              </span>
-            </small>
-            <small class="text-muted">{{ post.date | date: '%b %d, %Y' }}</small>
-          </div>
-        </div>
-      {% endfor %}
-    </div>
+	<!-- 2nd to 5th posts stacked vertically on right -->
+	<div class="col-md-6">
+  	{% assign posts = site.posts | slice: 1, 4 %}
+  	{% for post in posts %}
+    	<div class="mb-4 d-flex">
+      	{% if post.image %}
+        	<div class="mr-3" style="width: 100px;">
+          	<a href="{{ site.baseurl }}{{ post.url }}">
+            	<img class="img-fluid rounded" src="{% if post.image contains '://' %}{{ post.image }}{% else %}{{ site.baseurl }}/{{ post.image }}{% endif %}" alt="{{ post.title }}">
+          	</a>
+        	</div>
+      	{% endif %}
+      	<div>
+        	<h2 class="h6 font-weight-bold mb-1">
+          	<a class="text-dark" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+        	</h2>
+        	<small class="d-block" style="color: #333;">
+          	In
+          	<span class="catlist">
+            	{% for category in post.categories %}
+              	<a class="text-capitalize" style="color: #333;" href="{{ site.baseurl }}/categories.html#{{ category | downcase }}">{{ category }}</a>{% unless forloop.last %}, {% endunless %}
+            	{% endfor %}
+          	</span>
+        	</small>
+        	<small class="text-muted">{{ post.date | date: '%b %d, %Y' }}</small>
+      	</div>
+    	</div>
+  	{% endfor %}
+	</div>
 
   </div>
 
   <!-- Sticky Posts -->
   {% for post in site.posts %}
-    {% if post.tags contains "sticky" %}
-      <div class="jumbotron pt-4 pb-4 mt-3 mb-4 border rounded" style="background-color: rgba(255,255,255,0.05); border: 1px solid var(--neon-green); box-shadow: 0 0 12px var(--neon-green);">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-6">
-              <h1 class="mb-3">{{ post.title }}</h1>
-              <p class="lead mb-4">
-                {{ post.excerpt | strip_html | strip_newlines | truncate: 140 }}
-              </p>
-              <a href="{{ site.baseurl }}{{ post.url }}" class="btn">Read More</a>
-            </div>
-            <div class="col-md-6 d-none d-md-block" style="background-image: url({% if post.image contains '://' %}{{ post.image }}{% else %}{{ site.baseurl }}/{{ post.image }}{% endif %}); background-size: cover; background-position: center; height: 300px; border-radius: 0.5rem;">
-            </div>
-          </div>
-        </div>
-      </div>
-    {% endif %}
+	{% if post.tags contains "sticky" %}
+  	<div class="jumbotron jumbotron-fluid jumbotron-home pt-4 pb-4 mt-3 mb-4 bg-light border rounded" style="background-color: #eaffea;">
+    	<div class="container">
+      	<div class="row">
+        	<div class="col-md-6">
+          	<h1 class="mb-3">{{ post.title }}</h1>
+          	<p class="lead mb-4">
+            	{{ post.excerpt | strip_html | strip_newlines | truncate: 140 }}
+          	</p>
+          	<a href="{{ site.baseurl }}{{ post.url }}" class="btn btn-success">Read More</a>
+        	</div>
+        	<div class="col-md-6 d-none d-md-block" style="background-image: url({% if post.image contains '://' %}{{ post.image }}{% else %}{{ site.baseurl }}/{{ post.image }}{% endif %}); background-size: cover; background-position: center; height: 300px; border-radius: 0.5rem;">
+        	</div>
+      	</div>
+    	</div>
+  	</div>
+	{% endif %}
   {% endfor %}
 
   {% endif %}
@@ -199,59 +100,59 @@ description: "Welcome to my personal site where I share projects, tutorials, and
   <!-- All Stories + Pagination + Sidebar -->
   <div class="row mt-4">
 
-    <!-- Left: Main loop -->
-    <div class="col-md-8 main-loop">
-      <h4 class="font-weight-bold spanborder"><span>All Stories</span></h4>
+	<!-- Left: Main loop -->
+	<div class="col-md-8 main-loop">
+  	<h4 class="font-weight-bold spanborder"><span>All Stories</span></h4>
 
-      {% for post in paginator.posts %}
-        {% include main-loop-card.html %}
-      {% endfor %}
+  	{% for post in paginator.posts %}
+    	{% include main-loop-card.html %}
+  	{% endfor %}
 
-      <!-- Pagination (must stay inside col-md-8) -->
-      <div class="mt-5">
-        {% if paginator.total_pages > 1 %}
-          <ul class="pagination">
+  	<!-- Pagination (must stay inside col-md-8) -->
+  	<div class="mt-5">
+    	{% if paginator.total_pages > 1 %}
+      	<ul class="pagination">
 
-            <!-- Previous -->
-            {% if paginator.previous_page %}
-              <li class="page-item">
-                <a class="page-link" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
-              </li>
-            {% else %}
-              <li class="page-item disabled"><span class="page-link">&laquo;</span></li>
-            {% endif %}
+        	<!-- Previous -->
+        	{% if paginator.previous_page %}
+          	<li class="page-item">
+            	<a class="page-link" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
+          	</li>
+        	{% else %}
+          	<li class="page-item disabled"><span class="page-link">&laquo;</span></li>
+        	{% endif %}
 
-            <!-- Page numbers -->
-            {% for page in (1..paginator.total_pages) %}
-              {% if page == paginator.page %}
-                <li class="page-item active"><span class="page-link">{{ page }}</span></li>
-              {% elsif page == 1 %}
-                <li class="page-item"><a class="page-link" href="{{ site.baseurl }}/">{{ page }}</a></li>
-              {% else %}
-                <li class="page-item">
-                  <a class="page-link" href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
-                </li>
-              {% endif %}
-            {% endfor %}
+        	<!-- Page numbers -->
+        	{% for page in (1..paginator.total_pages) %}
+          	{% if page == paginator.page %}
+            	<li class="page-item active"><span class="page-link">{{ page }}</span></li>
+          	{% elsif page == 1 %}
+            	<li class="page-item"><a class="page-link" href="{{ site.baseurl }}/">{{ page }}</a></li>
+          	{% else %}
+            	<li class="page-item">
+              	<a class="page-link" href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+            	</li>
+          	{% endif %}
+        	{% endfor %}
 
-            <!-- Next -->
-            {% if paginator.next_page %}
-              <li class="page-item">
-                <a class="page-link" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
-              </li>
-            {% else %}
-              <li class="page-item disabled"><span class="page-link">&raquo;</span></li>
-            {% endif %}
+        	<!-- Next -->
+        	{% if paginator.next_page %}
+          	<li class="page-item">
+            	<a class="page-link" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
+          	</li>
+        	{% else %}
+          	<li class="page-item disabled"><span class="page-link">&raquo;</span></li>
+        	{% endif %}
 
-          </ul>
-        {% endif %}
-      </div>
-    </div>
+      	</ul>
+    	{% endif %}
+  	</div>
+	</div>
 
-    <!-- Right: Sidebar -->
-    <div class="col-md-4">
-      {% include sidebar-featured.html %}
-    </div>
+	<!-- Right: Sidebar -->
+	<div class="col-md-4">
+  	{% include sidebar-featured.html %}
+	</div>
 
   </div>
 
