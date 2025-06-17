@@ -22,77 +22,153 @@
     <!-- Theme Stylesheet -->
     <link rel="stylesheet" href="{{site.baseurl}}/assets/css/theme.css">
 
-    <!-- Jquery on header to make sure everything works, the rest  of the scripts in footer for fast loading -->
-    <script
-    src="https://code.jquery.com/jquery-3.3.1.min.js"
-    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-    crossorigin="anonymous"></script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>{{page.title}} | {{site.name}}</title>
 
-    {% include tracking-header.html %}
+  {% seo %}
 
+  <link rel="shortcut icon" type="image/x-icon" href="{{site.baseurl}}/{{site.favicon}}">
 
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" crossorigin="anonymous">
+
+  <!-- Google Fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700" rel="stylesheet">
+
+  <!-- Bootstrap Modified -->
+  <link rel="stylesheet" href="{{site.baseurl}}/assets/css/main.css">
+
+  <!-- Theme Stylesheet -->
+  <link rel="stylesheet" href="{{site.baseurl}}/assets/css/theme.css">
+
+  <!-- Dark Mode Styles -->
+  <style>
+    body.dark-mode {
+      background-color: #121212 !important;
+      color: #e0e0e0 !important;
+    }
+
+    body.dark-mode a {
+      color: #90caf9 !important;
+    }
+
+    body.dark-mode .navbar,
+    body.dark-mode footer,
+    body.dark-mode .border,
+    body.dark-mode .p-4,
+    body.dark-mode .rounded,
+    body.dark-mode .container,
+    body.dark-mode .listauthor {
+      background-color: #1e1e1e !important;
+      color: #e0e0e0 !important;
+      border-color: #333 !important;
+    }
+
+    body.dark-mode code {
+      background-color: #333 !important;
+      color: #fff !important;
+    }
+
+    #night-mode-toggle {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      z-index: 9999;
+      padding: 8px 14px;
+      border: none;
+      border-radius: 6px;
+      background: #333;
+      color: #fff;
+      font-size: 0.9rem;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+  </style>
+
+  <!-- jQuery (must be early) -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+
+  {% include tracking-header.html %}
 </head>
 
-<body class="{% if page.url == "/" %} homefirstpage {% endif %}">
+<body class="{% if page.url == '/' %} homefirstpage {% endif %}">
 
-    <!-- Navbar -->
-    <nav id="MagicMenu" class="topnav navbar navbar-expand-lg navbar-light bg-white fixed-top">
+  <!-- 🌙 Night Mode Toggle Button -->
+  <button id="night-mode-toggle">🌙 Night Mode</button>
+
+  <!-- Navbar -->
+  <nav id="MagicMenu" class="topnav navbar navbar-expand-lg navbar-light bg-white fixed-top">
     <div class="container">
-        <a class="navbar-brand" href="{{ site.baseurl }}/index.html"><strong>{{site.name}}</strong></a>
-        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+      <a class="navbar-brand" href="{{ site.baseurl }}/index.html"><strong>{{site.name}}</strong></a>
+      <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="navbar-collapse collapse" id="navbarColor02" style="">
-            <ul class="navbar-nav mr-auto d-flex align-items-center">
-               {% include menu-header.html %}
-            </ul>
-            <ul class="navbar-nav ml-auto d-flex align-items-center">
-                {% include search-lunr.html %}
-            </ul>
-        </div>
+      </button>
+      <div class="navbar-collapse collapse" id="navbarColor02">
+        <ul class="navbar-nav mr-auto d-flex align-items-center">
+          {% include menu-header.html %}
+        </ul>
+        <ul class="navbar-nav ml-auto d-flex align-items-center">
+          {% include search-lunr.html %}
+        </ul>
+      </div>
     </div>
-    </nav>
+  </nav>
 
-    <!-- Search Results -->
-    <div id="lunrsearchresults">
-        <ul class="mb-0"></ul>
-    </div>
-
-    <!-- Content -->
-    <main role="main" class="site-content">
-        {{ content }}
-    </main>
-
-
-    <!-- Scripts: popper, bootstrap, theme, lunr -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
-
-    <script src="{{site.baseurl}}/assets/js/theme.js"></script>
-
-<!-- Footer -->
-<!-- Footer -->
-<footer class="bg-white border-top p-3 text-muted small text-center">
-  <div class="container">
-    <span><strong>Rayean's Creative Lab</strong> © <script>document.write(new Date().getFullYear())</script>. All rights reserved.</span>
-    &nbsp;|&nbsp;
-    <span>Follow on</span>
-    <a class="text-dark mx-1" target="_blank" href="https://www.linkedin.com/in/rayean-mahmud-arnob-a78345173/">
-      <i class="fab fa-linkedin fa-lg"></i>
-      <span class="sr-only">LinkedIn</span>
-    </a>
-    &nbsp;|&nbsp;
-    <a class="text-dark" href="{{ site.baseurl }}/contact.html">
-      Contact
-    </a>
+  <!-- Search Results -->
+  <div id="lunrsearchresults">
+    <ul class="mb-0"></ul>
   </div>
-</footer>
 
+  <!-- Content -->
+  <main role="main" class="site-content">
+    {{ content }}
+  </main>
 
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
+  <script src="{{site.baseurl}}/assets/js/theme.js"></script>
 
-    {% include tracking-footer.html %}
+  <!-- 🌓 Night Mode Script -->
+  <script>
+    const toggleBtn = document.getElementById("night-mode-toggle");
+    const body = document.body;
 
+    // On load, apply dark mode if set
+    if (localStorage.getItem("theme") === "dark") {
+      body.classList.add("dark-mode");
+      toggleBtn.textContent = "☀️ Day Mode";
+    }
+
+    toggleBtn.addEventListener("click", () => {
+      const dark = body.classList.toggle("dark-mode");
+      localStorage.setItem("theme", dark ? "dark" : "light");
+      toggleBtn.textContent = dark ? "☀️ Day Mode" : "🌙 Night Mode";
+    });
+  </script>
+
+  <!-- Footer -->
+  <footer class="bg-white border-top p-3 text-muted small text-center">
+    <div class="container">
+      <span><strong>Rayean's Creative Lab</strong> © <script>document.write(new Date().getFullYear())</script>. All rights reserved.</span>
+      &nbsp;|&nbsp;
+      <span>Follow on</span>
+      <a class="text-dark mx-1" target="_blank" href="https://www.linkedin.com/in/rayean-mahmud-arnob-a78345173/">
+        <i class="fab fa-linkedin fa-lg"></i>
+        <span class="sr-only">LinkedIn</span>
+      </a>
+      &nbsp;|&nbsp;
+      <a class="text-dark" href="{{ site.baseurl }}/contact.html">
+        Contact
+      </a>
+    </div>
+  </footer>
+
+  {% include tracking-footer.html %}
 </body>
-
 </html>
