@@ -66,13 +66,12 @@ layout: page
     <label for="email">Your Email</label>
     <input type="email" name="email" id="email" placeholder="you@example.com" required>
 
-    <label for="message">Your Message</label>
+  <label for="message">Your Message</label>
     <textarea name="message" id="message" rows="6" placeholder="Write your message here..." required></textarea>
 
-    <button type="submit">Send Message</button>
+  <button type="submit">Send Message</button>
   </form>
 </div>
-
 
 
     <label for="message">Your Message</label>
