@@ -4,8 +4,16 @@ permalink: "/contact.html"
 layout: page
 ---
 
+<!-- ✅ Mailchimp Sitewide Script (paste in <head> section of your layout if not already) -->
+<script id="mcjs">
+!function(c,h,i,m,p){m=c.createElement(h),
+p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,
+p.parentNode.insertBefore(m,p)}
+(document,"script","https://chimpstatic.com/mcjs-connected/js/users/aa6e06d3ca4533f339ea0783b/f4a44c943af3b3947b766e8a7.js");
+</script>
+
 <style>
-  .contact-form {
+  .contact-form, .newsletter-form {
     max-width: 600px;
     margin: 2rem auto;
     padding: 2rem;
@@ -14,19 +22,18 @@ layout: page
     box-shadow: 0 0 10px rgba(0,0,0,0.05);
   }
 
-  .contact-form h2 {
+  .contact-form h2, .newsletter-form h2 {
     text-align: center;
     margin-bottom: 1.5rem;
   }
 
-  .contact-form label {
+  label {
     display: block;
     margin-bottom: 0.5rem;
     font-weight: 600;
   }
 
-  .contact-form input,
-  .contact-form textarea {
+  input, textarea {
     width: 100%;
     padding: 0.75rem;
     margin-bottom: 1.2rem;
@@ -35,61 +42,36 @@ layout: page
     font-size: 1rem;
   }
 
-  .contact-form button {
+  button {
     width: 100%;
     padding: 0.75rem;
-    background-color: #007bff;
-    color: #fff;
     font-size: 1.1rem;
     border: none;
     border-radius: 8px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .contact-form button {
+    background-color: #007bff;
+    color: #fff;
   }
 
   .contact-form button:hover {
     background-color: #0056b3;
   }
 
-  .newsletter-form {
-    max-width: 600px;
-    margin: 2rem auto;
-    padding: 2rem;
-    background-color: #f1f1f1;
-    border-radius: 12px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.05);
-  }
-
-  .newsletter-form h2 {
-    text-align: center;
-    margin-bottom: 1.2rem;
-  }
-
-  .newsletter-form input {
-    width: 100%;
-    padding: 0.75rem;
-    margin-bottom: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 1rem;
-  }
-
   .newsletter-form button {
-    width: 100%;
-    padding: 0.75rem;
     background-color: #28a745;
     color: #fff;
-    font-size: 1.1rem;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
   }
 
   .newsletter-form button:hover {
-    background-color: #218838;
+    background-color: #1e7e34;
   }
 </style>
 
-<!-- Contact Form -->
+<!-- 📬 Contact Form -->
 <div class="contact-form">
   <h2>📬 Get in Touch</h2>
   <form action="https://formspree.io/f/xovwdvzk" method="POST">
@@ -103,22 +85,15 @@ layout: page
   </form>
 </div>
 
-<!-- Newsletter Form -->
+<!-- 📰 Newsletter Signup (Mailchimp Embedded Form) -->
 <div class="newsletter-form">
   <h2>📨 Subscribe to Newsletter</h2>
-  <form action="https://formsubmit.co/rayean.dev@gmail.com" method="POST">
-    <input type="email" name="email" placeholder="Enter your email to subscribe" required>
-    
-    <!-- Prevent bot signups -->
-    <input type="text" name="_honey" style="display:none">
-    <!-- No captcha -->
-    <input type="hidden" name="_captcha" value="false">
-    <!-- Redirect after success (optional) -->
-    <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html">
-
+  <form action="https://us14.list-manage.com/subscribe/post?u=aa6e06d3ca4533f339ea0783b&amp;id=f4a44c943a" method="post" target="_self" novalidate>
+    <input type="email" name="EMAIL" placeholder="Enter your email" required>
     <button type="submit">Subscribe</button>
   </form>
 </div>
+
 
 
     <label for="message">Your Message</label>
