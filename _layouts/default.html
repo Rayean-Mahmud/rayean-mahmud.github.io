@@ -30,6 +30,16 @@
 
 	{% include tracking-header.html %}
 
+	<!-- ✅ Mailchimp Sitewide Script -->
+	<script id="mcjs">
+	  !function(c,h,i,m,p){
+	    m=c.createElement(h),
+	    p=c.getElementsByTagName(h)[0],
+	    m.async=1,
+	    m.src=i,
+	    p.parentNode.insertBefore(m,p)
+	  }(document,"script","https://chimpstatic.com/mcjs-connected/js/users/aa6e06d3ca4533f339ea0783b/f4a44c943af3b3947b766e8a7.js");
+	</script>
 
 </head>
 
@@ -63,7 +73,6 @@
     	{{ content }}
 	</main>
 
-
 	<!-- Scripts: popper, bootstrap, theme, lunr -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
 
@@ -71,29 +80,27 @@
 
 	<script src="{{site.baseurl}}/assets/js/theme.js"></script>
 
-<!-- Footer -->
-<!-- Footer -->
-<footer class="bg-white border-top p-3 text-muted small text-center">
-  <div class="container">
-	<span><strong>Rayean's Creative Lab</strong> © <script>document.write(new Date().getFullYear())</script>. All rights reserved.</span>
-	&nbsp;|&nbsp;
-	<span>Follow on</span>
-	<a class="text-dark mx-1" target="_blank" href="https://www.linkedin.com/in/rayean-mahmud-arnob-a78345173/">
-  	<i class="fab fa-linkedin fa-lg"></i>
-  	<span class="sr-only">LinkedIn</span>
-	</a>
-	&nbsp;|&nbsp;
-	<a class="text-dark" href="{{ site.baseurl }}/contact.html">
-  	Contact
-	</a>
-  </div>
-</footer>
-
-
+	<!-- Footer -->
+	<footer class="bg-white border-top p-3 text-muted small text-center">
+	  <div class="container">
+		<span><strong>Rayean's Creative Lab</strong> © <script>document.write(new Date().getFullYear())</script>. All rights reserved.</span>
+		&nbsp;|&nbsp;
+		<span>Follow on</span>
+		<a class="text-dark mx-1" target="_blank" href="https://www.linkedin.com/in/rayean-mahmud-arnob-a78345173/">
+		  <i class="fab fa-linkedin fa-lg"></i>
+		  <span class="sr-only">LinkedIn</span>
+		</a>
+		&nbsp;|&nbsp;
+		<a class="text-dark" href="{{ site.baseurl }}/contact.html">
+		  Contact
+		</a>
+	  </div>
+	</footer>
 
 	{% include tracking-footer.html %}
 
 </body>
 
 </html>
+
 
