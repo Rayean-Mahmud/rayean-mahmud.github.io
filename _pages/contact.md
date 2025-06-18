@@ -75,7 +75,6 @@ layout: page
 
 
 
-
     <label for="message">Your Message</label>
     <textarea name="message" id="message" rows="6" placeholder="Write your message here..." required></textarea>
 
