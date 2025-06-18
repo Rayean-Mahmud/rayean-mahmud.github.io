@@ -13,7 +13,7 @@ p.parentNode.insertBefore(m,p)}
 </script>
 
 <style>
-  .contact-form, .newsletter-form {
+  .contact-form {
     max-width: 600px;
     margin: 2rem auto;
     padding: 2rem;
@@ -22,7 +22,7 @@ p.parentNode.insertBefore(m,p)}
     box-shadow: 0 0 10px rgba(0,0,0,0.05);
   }
 
-  .contact-form h2, .newsletter-form h2 {
+  .contact-form h2 {
     text-align: center;
     margin-bottom: 1.5rem;
   }
@@ -50,24 +50,12 @@ p.parentNode.insertBefore(m,p)}
     border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-  }
-
-  .contact-form button {
     background-color: #007bff;
     color: #fff;
   }
 
-  .contact-form button:hover {
+  button:hover {
     background-color: #0056b3;
-  }
-
-  .newsletter-form button {
-    background-color: #28a745;
-    color: #fff;
-  }
-
-  .newsletter-form button:hover {
-    background-color: #1e7e34;
   }
 </style>
 
@@ -82,15 +70,6 @@ p.parentNode.insertBefore(m,p)}
     <textarea name="message" id="message" rows="6" placeholder="Write your message here..." required></textarea>
 
     <button type="submit">Send Message</button>
-  </form>
-</div>
-
-<!-- 📰 Newsletter Signup (Mailchimp Embedded Form) -->
-<div class="newsletter-form">
-  <h2>📨 Subscribe to Newsletter</h2>
-  <form action="https://us14.list-manage.com/subscribe/post?u=aa6e06d3ca4533f339ea0783b&amp;id=f4a44c943a" method="post" target="_self" novalidate>
-    <input type="email" name="EMAIL" placeholder="Enter your email" required>
-    <button type="submit">Subscribe</button>
   </form>
 </div>
 
