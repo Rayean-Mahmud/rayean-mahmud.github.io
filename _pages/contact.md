@@ -4,12 +4,12 @@ permalink: "/contact.html"
 layout: page
 ---
 
-<!-- ✅ Mailchimp Sitewide Script (paste in <head> section of your layout if not already) -->
+<!-- ✅ Mailchimp Sitewide Script (if not already in default layout) -->
 <script id="mcjs">
-!function(c,h,i,m,p){m=c.createElement(h),
-p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,
-p.parentNode.insertBefore(m,p)}
-(document,"script","https://chimpstatic.com/mcjs-connected/js/users/aa6e06d3ca4533f339ea0783b/f4a44c943af3b3947b766e8a7.js");
+!function(c,h,i,m,p){
+  m=c.createElement(h),p=c.getElementsByTagName(h)[0],
+  m.async=1,m.src=i,p.parentNode.insertBefore(m,p)
+}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/aa6e06d3ca4533f339ea0783b/f4a44c943af3b3947b766e8a7.js");
 </script>
 
 <style>
@@ -54,7 +54,7 @@ p.parentNode.insertBefore(m,p)}
     color: #fff;
   }
 
-  button:hover {
+  .contact-form button:hover {
     background-color: #0056b3;
   }
 </style>
@@ -72,6 +72,7 @@ p.parentNode.insertBefore(m,p)}
     <button type="submit">Send Message</button>
   </form>
 </div>
+
 
 
 
