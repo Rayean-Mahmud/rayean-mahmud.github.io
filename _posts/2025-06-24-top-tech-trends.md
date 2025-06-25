@@ -147,16 +147,44 @@ Amid all this tech, **empathy, accessibility, and ethics** are key.
 
 ## 📈 TL;DR – Top 7 Trends (2025–2030)
 
-| 🌟 Trend          | 🔍 What to Watch                     |
-|-------------------|------------------------------------|
-| 🤖 Generative AI  | Productivity, creativity, automation |
-| 🌐 Web3           | Ownership, privacy, decentralized internet |
-| 🧪 Quantum Computing | Complex problem-solving power    |
-| 🔄 Hyperautomation | AI-built systems and workflows     |
-| 🌱 Green Tech     | Sustainable innovation and ESG     |
-| 🧠 BCIs           | Brain-computer communication       |
-| 🔐 AI Cybersecurity | Smarter protection, smarter threats |
-
+<table style="width:100%; border-collapse: collapse; font-family: Arial, sans-serif;">
+  <thead>
+    <tr>
+      <th style="border: 2px solid #000; padding: 8px; background-color: #222; color: white; text-align: left;">🌟 Trend</th>
+      <th style="border: 2px solid #000; padding: 8px; background-color: #222; color: white; text-align: left;">🔍 What to Watch</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border: 2px solid #000; padding: 8px;">🤖 Generative AI</td>
+      <td style="border: 2px solid #000; padding: 8px;">Productivity, creativity, automation</td>
+    </tr>
+    <tr style="background-color: #f9f9f9;">
+      <td style="border: 2px solid #000; padding: 8px;">🌐 Web3</td>
+      <td style="border: 2px solid #000; padding: 8px;">Ownership, privacy, decentralized internet</td>
+    </tr>
+    <tr>
+      <td style="border: 2px solid #000; padding: 8px;">🧪 Quantum Computing</td>
+      <td style="border: 2px solid #000; padding: 8px;">Complex problem-solving power</td>
+    </tr>
+    <tr style="background-color: #f9f9f9;">
+      <td style="border: 2px solid #000; padding: 8px;">🔄 Hyperautomation</td>
+      <td style="border: 2px solid #000; padding: 8px;">AI-built systems and workflows</td>
+    </tr>
+    <tr>
+      <td style="border: 2px solid #000; padding: 8px;">🌱 Green Tech</td>
+      <td style="border: 2px solid #000; padding: 8px;">Sustainable innovation and ESG</td>
+    </tr>
+    <tr style="background-color: #f9f9f9;">
+      <td style="border: 2px solid #000; padding: 8px;">🧠 BCIs</td>
+      <td style="border: 2px solid #000; padding: 8px;">Brain-computer communication</td>
+    </tr>
+    <tr>
+      <td style="border: 2px solid #000; padding: 8px;">🔐 AI Cybersecurity</td>
+      <td style="border: 2px solid #000; padding: 8px;">Smarter protection, smarter threats</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
