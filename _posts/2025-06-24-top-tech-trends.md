@@ -138,15 +138,89 @@ Amid all this tech, **empathy, accessibility, and ethics** are key.
 
 ## 📈 TL;DR – Top 7 Trends (2025–2030)
 
-| Trend | What to Watch |
-|-------|----------------|
-| 🤖 Generative AI | Productivity, creativity, automation |
-| 🌐 Web3 | Ownership, privacy, decentralized internet |
-| 🧪 Quantum Computing | Complex problem-solving power |
-| 🔄 Hyperautomation | AI-built systems and workflows |
-| 🌱 Green Tech | Sustainable innovation and ESG |
-| 🧠 BCIs | Brain-computer communication |
-| 🔐 AI Cybersecurity | Smarter protection, smarter threats |
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Technology Trends</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      padding: 40px;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    table {
+      width: 70%;
+      margin: 0 auto;
+      border-collapse: collapse;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    th, td {
+      border: 2px solid #000; /* Black lines between cells */
+      padding: 15px;
+      text-align: left;
+      font-size: 16px;
+    }
+    th {
+      background-color: #333;
+      color: #fff;
+      font-size: 18px;
+    }
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+    tr:hover {
+      background-color: #eaeaea;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Tech Trends to Watch</h1>
+  
+  <table>
+    <tr>
+      <th>Trend</th>
+      <th>What to Watch</th>
+    </tr>
+    <tr>
+      <td>🤖 Generative AI</td>
+      <td>Productivity, creativity, automation</td>
+    </tr>
+    <tr>
+      <td>🌐 Web3</td>
+      <td>Ownership, privacy, decentralized internet</td>
+    </tr>
+    <tr>
+      <td>🧪 Quantum Computing</td>
+      <td>Complex problem-solving power</td>
+    </tr>
+    <tr>
+      <td>🔄 Hyperautomation</td>
+      <td>AI-built systems and workflows</td>
+    </tr>
+    <tr>
+      <td>🌱 Green Tech</td>
+      <td>Sustainable innovation and ESG</td>
+    </tr>
+    <tr>
+      <td>🧠 BCIs</td>
+      <td>Brain-computer communication</td>
+    </tr>
+    <tr>
+      <td>🔐 AI Cybersecurity</td>
+      <td>Smarter protection, smarter threats</td>
+    </tr>
+  </table>
+
+</body>
+</html>
+
 
 ---
 
