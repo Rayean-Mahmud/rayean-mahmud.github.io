@@ -4,7 +4,8 @@ title: "Building Atomic Habits as a Developer"
 author: rayean
 categories: [Self Development, Productivity]
 image: https://cdn.hashnode.com/res/hashnode/image/upload/v1736117310936/458bfb45-a8c7-46df-918c-4cd822a77a4e.png
-tags: [habits, productivity, developer mindset, self improvement, routine, software engineering]
+tags: [sticky, habits, productivity, developer mindset, self improvement, routine, software engineering]
+sticky: true
 ---
 
 > _"You don’t rise to the level of your goals. You fall to the level of your systems." — James Clear_
