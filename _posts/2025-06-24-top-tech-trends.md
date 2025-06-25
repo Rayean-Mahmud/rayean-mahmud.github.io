@@ -147,45 +147,16 @@ Amid all this tech, **empathy, accessibility, and ethics** are key.
 
 ## 📈 TL;DR – Top 7 Trends (2025–2030)
 
-<!-- Mobile-friendly HTML table -->
-<table>
-  <thead>
-    <tr>
-      <th>🌟 Trend</th>
-      <th>🔍 What to Watch</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>🤖 Generative AI</td>
-      <td>Productivity, creativity, automation</td>
-    </tr>
-    <tr>
-      <td>🌐 Web3</td>
-      <td>Ownership, privacy, decentralized internet</td>
-    </tr>
-    <tr>
-      <td>🧪 Quantum Computing</td>
-      <td>Complex problem-solving power</td>
-    </tr>
-    <tr>
-      <td>🔄 Hyperautomation</td>
-      <td>AI-built systems and workflows</td>
-    </tr>
-    <tr>
-      <td>🌱 Green Tech</td>
-      <td>Sustainable innovation and ESG</td>
-    </tr>
-    <tr>
-      <td>🧠 BCIs</td>
-      <td>Brain-computer communication</td>
-    </tr>
-    <tr>
-      <td>🔐 AI Cybersecurity</td>
-      <td>Smarter protection, smarter threats</td>
-    </tr>
-  </tbody>
-</table>
+| 🌟 Trend          | 🔍 What to Watch                     |
+|-------------------|------------------------------------|
+| 🤖 Generative AI  | Productivity, creativity, automation |
+| 🌐 Web3           | Ownership, privacy, decentralized internet |
+| 🧪 Quantum Computing | Complex problem-solving power    |
+| 🔄 Hyperautomation | AI-built systems and workflows     |
+| 🌱 Green Tech     | Sustainable innovation and ESG     |
+| 🧠 BCIs           | Brain-computer communication       |
+| 🔐 AI Cybersecurity | Smarter protection, smarter threats |
+
 
 ---
 
