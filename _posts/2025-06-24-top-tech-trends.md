@@ -138,7 +138,6 @@ Amid all this tech, **empathy, accessibility, and ethics** are key.
 
 ## 📈 TL;DR – Top 7 Trends (2025–2030)
 
-<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
