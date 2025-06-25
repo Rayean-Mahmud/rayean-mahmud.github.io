@@ -4,7 +4,7 @@ layout: post
 author: rayean
 categories: [Tech]
 tags: [tech trends, future, AI, innovation, automation, Web3, career]
-image: https://www.simplilearn.com/ice9/free_resources_article_thumb/Top_technology_trends.jpg
+image: https://www.consultancy.com.au/illustrations/news/spotlight/2021-11-08-090810631-Research--Six-trends-in-the-digital-transformation-landscape.jpg
 description: "Explore the most transformative tech trends shaping the next five years — from AI and automation to quantum computing and Web3. Stay ahead of the curve."
 keywords: ["tech trends 2025", "future technology", "AI and automation", "quantum computing", "Web3", "future jobs", "emerging technology", "developer future", "technology forecast"]
 
