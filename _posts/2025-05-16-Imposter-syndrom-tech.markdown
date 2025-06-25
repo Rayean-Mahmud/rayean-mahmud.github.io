@@ -4,8 +4,7 @@ title:  "How to Cope with Impostor Syndrome in Tech"
 author: rayean
 categories: [Tech, Productivity, Mental Health, Digital Wellness ]
 image: https://blog.howareyou.work/content/images/size/w1000/2023/07/imposter-syndrome-software-development.jpg
-tags: [ sticky ]
-sticky: true
+
 
 ---
 
